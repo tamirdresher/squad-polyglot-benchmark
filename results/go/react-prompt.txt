@@ -1,0 +1,76 @@
+Implement the solution for the 'react' exercise.
+
+## Instructions
+# Instructions
+
+Implement a basic reactive system.
+
+Reactive programming is a programming paradigm that focuses on how values are computed in terms of each other to allow a change to one value to automatically propagate to other values, like in a spreadsheet.
+
+Implement a basic reactive system with cells with settable values ("input" cells) and cells with values computed in terms of other cells ("compute" cells).
+Implement updates so that when an input value is changed, values propagate to reach a new stable system state.
+
+In addition, compute cells should allow for registering change notification callbacks.
+Call a cell’s callbacks when the cell’s value in a new stable state has changed from the previous stable state.
+
+
+## Current code in interfaces.go:
+```
+package react
+
+// A Reactor manages linked cells.
+type Reactor interface {
+	// CreateInput creates an input cell linked into the reactor
+	// with the given initial value.
+	CreateInput(int) InputCell
+
+	// CreateCompute1 creates a compute cell which computes its value
+	// based on one other cell. The compute function will only be called
+	// if the value of the passed cell changes.
+	CreateCompute1(Cell, func(int) int) ComputeCell
+
+	// CreateCompute2 is like CreateCompute1, but depending on two cells.
+	// The compute function will only be called if the value of any of the
+	// passed cells changes.
+	CreateCompute2(Cell, Cell, func(int, int) int) ComputeCell
+}
+
+// A Cell is conceptually a holder of a value.
+type Cell interface {
+	// Value returns the current value of the cell.
+	Value() int
+}
+
+// An InputCell has a changeable value, changing the value triggers updates to
+// other cells.
+type InputCell interface {
+	Cell
+
+	// SetValue sets the value of the cell.
+	SetValue(int)
+}
+
+// A ComputeCell always computes its value based on other cells and can
+// call callbacks upon changes.
+type ComputeCell interface {
+	Cell
+
+	// AddCallback adds a callback which will be called when the value changes.
+	// It returns a Canceler which can be used to remove the callback.
+	AddCallback(func(int)) Canceler
+}
+
+// A Canceler is used to remove previously added callbacks, see ComputeCell.
+type Canceler interface {
+	// Cancel removes the callback.
+	Cancel()
+}
+
+```
+
+Requirements:
+- Edit ONLY interfaces.go in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

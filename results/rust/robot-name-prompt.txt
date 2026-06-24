@@ -1,0 +1,47 @@
+Implement the solution for the 'robot-name' exercise.
+
+## Instructions
+# Instructions
+
+Manage robot factory settings.
+
+When a robot comes off the factory floor, it has no name.
+
+The first time you turn on a robot, a random name is generated in the format of two uppercase letters followed by three digits, such as RX837 or BC811.
+
+Every once in a while we need to reset a robot to its factory settings, which means that its name gets wiped.
+The next time you ask, that robot will respond with a new random name.
+
+The names must be random: they should not follow a predictable sequence.
+Using random names means a risk of collisions.
+Your solution must ensure that every existing robot has a unique name.
+
+
+## Current code in lib.rs:
+```
+pub struct Robot;
+
+impl Robot {
+    pub fn new() -> Self {
+        todo!("Construct a new Robot struct.");
+    }
+
+    pub fn name(&self) -> &str {
+        todo!("Return the reference to the robot's name.");
+    }
+
+    pub fn reset_name(&mut self) {
+        todo!("Assign a new unique name to the robot.");
+    }
+}
+
+
+
+```
+
+Requirements:
+- Edit ONLY lib.rs in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

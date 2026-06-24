@@ -1,0 +1,45 @@
+Implement the solution for the 'spiral-matrix' exercise.
+
+## Instructions
+# Instructions
+
+Your task is to return a square matrix of a given size.
+
+The matrix should be filled with natural numbers, starting from 1 in the top-left corner, increasing in an inward, clockwise spiral order, like these examples:
+
+## Examples
+
+### Spiral matrix of size 3
+
+```text
+1 2 3
+8 9 4
+7 6 5
+```
+
+### Spiral matrix of size 4
+
+```text
+ 1  2  3 4
+12 13 14 5
+11 16 15 6
+10  9  8 7
+```
+
+
+## Current code in spiral_matrix.cpp:
+```
+#include "spiral_matrix.h"
+
+namespace spiral_matrix {
+
+}  // namespace spiral_matrix
+
+```
+
+Requirements:
+- Edit ONLY spiral_matrix.cpp in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

@@ -1,0 +1,28 @@
+Implement the solution for the 'parallel-letter-frequency' exercise.
+
+## Instructions
+# Instructions
+
+Count the frequency of letters in texts using parallel computation.
+
+Parallelism is about doing things in parallel that can also be done sequentially.
+A common example is counting the frequency of letters.
+Employ parallelism to calculate the total frequency of each letter in a list of texts.
+
+
+## Current code in parallel_letter_frequency.cpp:
+```
+#include "parallel_letter_frequency.h"
+
+namespace parallel_letter_frequency {
+
+}
+
+```
+
+Requirements:
+- Edit ONLY parallel_letter_frequency.cpp in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

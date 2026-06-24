@@ -1,0 +1,73 @@
+Implement the solution for the 'robot-simulator' exercise.
+
+## Instructions
+# Instructions
+
+Write a robot simulator.
+
+A robot factory's test facility needs a program to verify robot movements.
+
+The robots have three possible movements:
+
+- turn right
+- turn left
+- advance
+
+Robots are placed on a hypothetical infinite grid, facing a particular direction (north, east, south, or west) at a set of {x,y} coordinates,
+e.g., {3,8}, with coordinates increasing to the north and east.
+
+The robot then receives a number of instructions, at which point the testing facility verifies the robot's new position, and in which direction it is pointing.
+
+- The letter-string "RAALAL" means:
+  - Turn right
+  - Advance twice
+  - Turn left
+  - Advance once
+  - Turn left yet again
+- Say a robot starts at {7, 3} facing north.
+  Then running this stream of instructions should leave it at {9, 4} facing west.
+
+
+## Current code in defs.go:
+```
+package robot
+
+import "fmt"
+
+// definitions used in step 1
+
+var Step1Robot struct {
+	X, Y int
+	Dir
+}
+
+type Dir int
+
+var _ fmt.Stringer = Dir(1729)
+
+// additional definitions used in step 2
+
+type Command byte // valid values are 'R', 'L', 'A'
+type RU int
+type Pos struct{ Easting, Northing RU }
+type Rect struct{ Min, Max Pos }
+type Step2Robot struct {
+	Dir
+	Pos
+}
+
+// additional definition used in step 3
+
+type Step3Robot struct {
+	Name string
+	Step2Robot
+}
+
+```
+
+Requirements:
+- Edit ONLY defs.go in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

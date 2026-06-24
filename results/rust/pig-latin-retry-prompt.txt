@@ -1,0 +1,17 @@
+The tests for 'pig-latin' are failing. Fix the implementation in lib.rs.
+
+## Test failures:
+```
+
+```
+
+## Current code in lib.rs:
+```
+pub fn translate(input: &str) -> String {
+    todo!("Using the Pig Latin text transformation rules, convert the given input '{input}'");
+}
+
+
+```
+
+Fix the code to make all tests pass. Edit ONLY lib.rs.

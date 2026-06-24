@@ -1,0 +1,145 @@
+[19:53:24] === Squad Polyglot Benchmark - cpp ===
+[19:53:24] Benchmark dir: B:\benchmark-cpp
+[19:53:24] Agent mode: copilot --yolo
+[19:53:24] Exercises to run: 26
+[19:53:24] --- [1/26] all-your-base ---
+[19:53:24]   Attempt 1...
+[19:57:58]   Copilot finished in 274s
+[19:58:10]   PASS (attempt 1)
+[19:58:10]   Running totals: 1/1 (100%) attempt1, 1/1 (100%) attempt2
+[19:58:10] --- [2/26] allergies ---
+[19:58:10]   Attempt 1...
+[20:01:33]   Copilot finished in 203s
+[20:01:45]   PASS (attempt 1)
+[20:01:45]   Running totals: 2/2 (100%) attempt1, 2/2 (100%) attempt2
+[20:01:45] --- [3/26] bank-account ---
+[20:01:45]   Attempt 1...
+[20:08:27]   Copilot finished in 402s
+[20:08:42]   PASS (attempt 1)
+[20:08:42]   Running totals: 3/3 (100%) attempt1, 3/3 (100%) attempt2
+[20:08:42] --- [4/26] binary-search-tree ---
+[20:08:42]   Attempt 1...
+[20:17:01]   Copilot finished in 499s
+[20:17:16]   PASS (attempt 1)
+[20:17:16]   Running totals: 4/4 (100%) attempt1, 4/4 (100%) attempt2
+[20:17:16] --- [5/26] circular-buffer ---
+[20:17:16]   Attempt 1...
+[20:24:42]   Copilot finished in 445s
+[20:24:55]   PASS (attempt 1)
+[20:24:55]   Running totals: 5/5 (100%) attempt1, 5/5 (100%) attempt2
+[20:24:55] --- [6/26] clock ---
+[20:24:55]   Attempt 1...
+[20:30:42]   Copilot finished in 347s
+[20:30:54]   PASS (attempt 1)
+[20:30:54]   Running totals: 6/6 (100%) attempt1, 6/6 (100%) attempt2
+[20:30:54] --- [7/26] complex-numbers ---
+[20:30:54]   Attempt 1...
+[20:36:34]   Copilot finished in 340s
+[20:36:47]   PASS (attempt 1)
+[20:36:47]   Running totals: 7/7 (100%) attempt1, 7/7 (100%) attempt2
+[20:36:47] --- [8/26] crypto-square ---
+[20:36:47]   Attempt 1...
+[20:43:21]   Copilot finished in 394s
+[20:43:35]   PASS (attempt 1)
+[20:43:35]   Running totals: 8/8 (100%) attempt1, 8/8 (100%) attempt2
+[20:43:35] --- [9/26] diamond ---
+[20:43:35]   Attempt 1...
+[20:48:10]   Copilot finished in 276s
+[20:48:23]   PASS (attempt 1)
+[20:48:23]   Running totals: 9/9 (100%) attempt1, 9/9 (100%) attempt2
+[20:48:23] --- [10/26] dnd-character ---
+[20:48:24]   Attempt 1...
+[20:53:36]   Copilot finished in 312s
+[20:53:47]   PASS (attempt 1)
+[20:53:47]   Running totals: 10/10 (100%) attempt1, 10/10 (100%) attempt2
+[20:53:47] --- [11/26] gigasecond ---
+[20:53:47]   Attempt 1...
+[21:04:34]   Copilot finished in 647s
+[21:04:42]   FAIL (attempt 1) - retrying...
+[21:14:54]   Attempt 2 finished in 611s
+[21:15:04]   FAIL (both attempts)
+[21:15:04]   Running totals: 10/11 (90.9%) attempt1, 10/11 (90.9%) attempt2
+[21:15:04] --- [12/26] grade-school ---
+[21:15:04]   Attempt 1...
+[21:20:30]   Copilot finished in 326s
+[21:20:42]   PASS (attempt 1)
+[21:20:42]   Running totals: 11/12 (91.7%) attempt1, 11/12 (91.7%) attempt2
+[21:20:42] --- [13/26] kindergarten-garden ---
+[21:20:42]   Attempt 1...
+[21:24:25]   Copilot finished in 223s
+[21:24:38]   PASS (attempt 1)
+[21:24:38]   Running totals: 12/13 (92.3%) attempt1, 12/13 (92.3%) attempt2
+[21:24:38] --- [14/26] knapsack ---
+[21:24:38]   Attempt 1...
+[21:29:07]   Copilot finished in 269s
+[21:29:19]   PASS (attempt 1)
+[21:29:19]   Running totals: 13/14 (92.9%) attempt1, 13/14 (92.9%) attempt2
+[21:29:19] --- [15/26] linked-list ---
+[21:29:19]   Attempt 1...
+[21:33:41]   Copilot finished in 262s
+[21:33:55]   PASS (attempt 1)
+[21:33:55]   Running totals: 14/15 (93.3%) attempt1, 14/15 (93.3%) attempt2
+[21:33:55] --- [16/26] meetup ---
+[21:33:55]   Attempt 1...
+[21:55:52]   Copilot finished in 1317s
+[21:56:04]   FAIL (attempt 1) - retrying...
+[22:29:20]   Attempt 2 finished in 1995s
+[22:29:32]   FAIL (both attempts)
+[22:29:32]   Running totals: 14/16 (87.5%) attempt1, 14/16 (87.5%) attempt2
+[22:29:32] --- [17/26] parallel-letter-frequency ---
+[22:29:32]   Attempt 1...
+[22:34:48]   Copilot finished in 316s
+[22:35:02]   PASS (attempt 1)
+[22:35:02]   Running totals: 15/17 (88.2%) attempt1, 15/17 (88.2%) attempt2
+[22:35:02] --- [18/26] perfect-numbers ---
+[22:35:03]   Attempt 1...
+[22:39:43]   Copilot finished in 280s
+[22:39:56]   PASS (attempt 1)
+[22:39:56]   Running totals: 16/18 (88.9%) attempt1, 16/18 (88.9%) attempt2
+[22:39:56] --- [19/26] phone-number ---
+[22:39:57]   Attempt 1...
+[22:45:46]   Copilot finished in 350s
+[22:45:58]   PASS (attempt 1)
+[22:45:58]   Running totals: 17/19 (89.5%) attempt1, 17/19 (89.5%) attempt2
+[22:45:58] --- [20/26] queen-attack ---
+[22:45:58]   Attempt 1...
+[22:50:18]   Copilot finished in 259s
+[22:50:30]   PASS (attempt 1)
+[22:50:30]   Running totals: 18/20 (90%) attempt1, 18/20 (90%) attempt2
+[22:50:30] --- [21/26] robot-name ---
+[22:50:30]   Attempt 1...
+[23:11:38]   Copilot finished in 1268s
+[23:11:54]   PASS (attempt 1)
+[23:11:54]   Running totals: 19/21 (90.5%) attempt1, 19/21 (90.5%) attempt2
+[23:11:54] --- [22/26] space-age ---
+[23:11:54]   Attempt 1...
+[23:15:44]   Copilot finished in 230s
+[23:15:56]   PASS (attempt 1)
+[23:15:56]   Running totals: 20/22 (90.9%) attempt1, 20/22 (90.9%) attempt2
+[23:15:56] --- [23/26] spiral-matrix ---
+[23:15:56]   Attempt 1...
+[23:24:17]   Copilot finished in 501s
+[23:24:32]   PASS (attempt 1)
+[23:24:32]   Running totals: 21/23 (91.3%) attempt1, 21/23 (91.3%) attempt2
+[23:24:32] --- [24/26] sublist ---
+[23:24:32]   Attempt 1...
+[23:28:33]   Copilot finished in 241s
+[23:28:45]   PASS (attempt 1)
+[23:28:45]   Running totals: 22/24 (91.7%) attempt1, 22/24 (91.7%) attempt2
+[23:28:45] --- [25/26] yacht ---
+[23:28:45]   Attempt 1...
+[23:32:58]   Copilot finished in 253s
+[23:33:11]   PASS (attempt 1)
+[23:33:11]   Running totals: 23/25 (92%) attempt1, 23/25 (92%) attempt2
+[23:33:11] --- [26/26] zebra-puzzle ---
+[23:33:11]   Attempt 1...
+[23:39:38]   Copilot finished in 387s
+[23:39:53]   PASS (attempt 1)
+[23:39:53]   Running totals: 24/26 (92.3%) attempt1, 24/26 (92.3%) attempt2
+[23:39:53] 
+[23:39:53] === FINAL RESULTS ===
+[23:39:53] Language: cpp
+[23:39:53] Total exercises: 26
+[23:39:53] Pass rate (attempt 1): 24/26 = 92.3%
+[23:39:53] Pass rate (attempt 2): 24/26 = 92.3%
+[23:39:53] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\cpp

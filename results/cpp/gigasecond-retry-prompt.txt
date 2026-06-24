@@ -1,0 +1,22 @@
+The tests for 'gigasecond' are failing. Fix the implementation in gigasecond.cpp.
+
+## Test failures:
+```
+
+```
+
+## Current code in gigasecond.cpp:
+```
+#include "gigasecond.h"
+
+namespace gigasecond {
+
+boost::posix_time::ptime advance(const boost::posix_time::ptime& start) {
+    return start + boost::posix_time::seconds(1000000000);
+}
+
+}  // namespace gigasecond
+
+```
+
+Fix the code to make all tests pass. Edit ONLY gigasecond.cpp.

@@ -1,0 +1,20 @@
+The tests for 'word-count' are failing. Fix the implementation in lib.rs.
+
+## Test failures:
+```
+
+```
+
+## Current code in lib.rs:
+```
+use std::collections::HashMap;
+
+/// Count occurrences of words.
+pub fn word_count(words: &str) -> HashMap<String, u32> {
+    todo!("Count of occurrences of words in {words:?}");
+}
+
+
+```
+
+Fix the code to make all tests pass. Edit ONLY lib.rs.

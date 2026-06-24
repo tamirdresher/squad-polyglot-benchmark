@@ -1,0 +1,32 @@
+Implement the solution for the 'poker' exercise.
+
+## Instructions
+# Instructions
+
+Pick the best hand(s) from a list of poker hands.
+
+See [wikipedia][poker-hands] for an overview of poker hands.
+
+[poker-hands]: https://en.wikipedia.org/wiki/List_of_poker_hands
+
+
+## Current code in lib.rs:
+```
+/// Given a list of poker hands, return a list of those hands which win.
+///
+/// Note the type signature: this function should return _the same_ reference to
+/// the winning hand(s) as were passed in, not reconstructed strings which happen to be equal.
+pub fn winning_hands<'a>(hands: &[&'a str]) -> Vec<&'a str> {
+    todo!("Out of {hands:?}, which hand wins?")
+}
+
+
+
+```
+
+Requirements:
+- Edit ONLY lib.rs in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

@@ -1,0 +1,158 @@
+Implement the solution for the 'ocr-numbers' exercise.
+
+## Instructions
+# Instructions
+
+Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is represented, or whether it is garbled.
+
+## Step One
+
+To begin with, convert a simple binary font to a string containing 0 or 1.
+
+The binary font uses pipes and underscores, four rows high and three columns wide.
+
+```text
+     _   #
+    | |  # zero.
+    |_|  #
+         # the fourth row is always blank
+```
+
+Is converted to "0"
+
+```text
+         #
+      |  # one.
+      |  #
+         # (blank fourth row)
+```
+
+Is converted to "1"
+
+If the input is the correct size, but not recognizable, your program should return '?'
+
+If the input is the incorrect size, your program should return an error.
+
+## Step Two
+
+Update your program to recognize multi-character binary strings, replacing garbled numbers with ?
+
+## Step Three
+
+Update your program to recognize all numbers 0 through 9, both individually and as part of a larger string.
+
+```text
+ _
+ _|
+|_
+
+```
+
+Is converted to "2"
+
+```text
+      _  _     _  _  _  _  _  _  #
+    | _| _||_||_ |_   ||_||_|| | # decimal numbers.
+    ||_  _|  | _||_|  ||_| _||_| #
+                                 # fourth line is always blank
+```
+
+Is converted to "1234567890"
+
+## Step Four
+
+Update your program to handle multiple numbers, one per line.
+When converting several lines, join the lines with commas.
+
+```text
+    _  _
+  | _| _|
+  ||_  _|
+
+    _  _
+|_||_ |_
+  | _||_|
+
+ _  _  _
+  ||_||_|
+  ||_| _|
+
+```
+
+Is converted to "123,456,789".
+
+
+## Current code in lib.rs:
+```
+#[derive(Debug, PartialEq, Eq)]
+pub enum Error {
+    InvalidRowCount(usize),
+    InvalidColumnCount(usize),
+}
+
+pub fn convert(input: &str) -> Result<String, Error> {
+    let lines: Vec<&str> = input.lines().collect();
+    if !lines.len().is_multiple_of(4) {
+        return Err(Error::InvalidRowCount(lines.len()));
+    }
+
+    lines
+        .chunks(4)
+        .map(convert_line)
+        .collect::<Result<Vec<String>, Error>>()
+        .map(|numbers| numbers.join(","))
+}
+
+fn convert_line(rows: &[&str]) -> Result<String, Error> {
+    for row in rows {
+        let width = row.chars().count();
+        if !width.is_multiple_of(3) {
+            return Err(Error::InvalidColumnCount(width));
+        }
+    }
+
+    let width = rows.iter().map(|row| row.chars().count()).max().unwrap_or(0);
+    let digit_count = width / 3;
+    let grid: Vec<Vec<char>> = rows.iter().map(|row| row.chars().collect()).collect();
+
+    let number = (0..digit_count)
+        .map(|index| recognize_digit(&grid, index))
+        .collect();
+
+    Ok(number)
+}
+
+fn recognize_digit(grid: &[Vec<char>], index: usize) -> char {
+    let start = index * 3;
+    let mut cell = String::with_capacity(9);
+    for row in grid.iter().take(3) {
+        for offset in 0..3 {
+            cell.push(*row.get(start + offset).unwrap_or(&' '));
+        }
+    }
+
+    match cell.as_str() {
+        " _ | ||_|" => '0',
+        "     |  |" => '1',
+        " _  _||_ " => '2',
+        " _  _| _|" => '3',
+        "   |_|  |" => '4',
+        " _ |_  _|" => '5',
+        " _ |_ |_|" => '6',
+        " _   |  |" => '7',
+        " _ |_||_|" => '8',
+        " _ |_| _|" => '9',
+        _ => '?',
+    }
+}
+
+
+
+```
+
+Requirements:
+- Edit ONLY lib.rs in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

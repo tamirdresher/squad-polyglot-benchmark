@@ -1,0 +1,106 @@
+Implement the solution for the 'hangman' exercise.
+
+## Instructions
+# Instructions
+
+Implement the logic of the hangman game using functional reactive programming.
+
+[Hangman][hangman] is a simple word guessing game.
+
+[Functional Reactive Programming][frp] is a way to write interactive programs.
+It differs from the usual perspective in that instead of saying "when the button is pressed increment the counter", you write "the value of the counter is the sum of the number of times the button is pressed."
+
+Implement the basic logic behind hangman using functional reactive programming.
+You'll need to install an FRP library for this, this will be described in the language/track specific files of the exercise.
+
+[hangman]: https://en.wikipedia.org/wiki/Hangman_%28game%29
+[frp]: https://en.wikipedia.org/wiki/Functional_reactive_programming
+
+
+## Current code in Hangman.java:
+```
+import io.reactivex.Observable;
+
+import java.util.*;
+
+class Hangman {
+
+    Observable<Output> play(
+            Observable<String> words,
+            Observable<String> letters) {
+        return Observable
+            .combineLatest(
+                words,
+                letters.startWith(""),
+                (word, letter) -> new AbstractMap.SimpleEntry<>(word, letter))
+            .scan(
+                Output.empty(),
+                (state, entry) -> {
+                    System.out.println(state + " -> " + entry);
+                    if (state == null || state.status != Status.PLAYING) {
+                        return createNewGame(entry.getKey());
+                    } else {
+                        return processNewLetter(state, entry.getValue());
+                    }
+                })
+            .skip(1); // Skip the initial state
+    }
+
+    private static Output createNewGame(String word) {
+        return Output.initialState(word);
+    }
+
+    private static Output processNewLetter(
+            Output state,
+            String letter) {
+        if (state.isLetterAlreadyPlayed(letter)) {
+            throw new IllegalArgumentException("Letter " + letter + " was already played");
+        }
+        if (state.isLetterInSecret(letter)) {
+            return processCorrectGuess(state, letter);
+        } else {
+            return processIncorrectGuess(state, letter);
+        }
+    }
+
+    private static Output processCorrectGuess(Output state, String letter) {
+        Set<String> newGuess = new HashSet<>(state.guess);
+        newGuess.add(letter);
+        String discovered = Output.getGuessedWord(state.secret, newGuess);
+        Status newStatus = Output.isWin(state.secret, newGuess) ? Status.WIN : Status.PLAYING;
+        return new Output(
+            state.secret,
+            discovered,
+            newGuess,
+            state.misses,
+            state.parts,
+            newStatus);
+    }
+
+    private static Output processIncorrectGuess(Output state, String letter) {
+        Set<String> newMisses = new HashSet<>(state.misses);
+        newMisses.add(letter);
+        List<Part> newParts = new ArrayList<>(state.parts);
+        newParts.add(order[newParts.size()]);
+        Status newStatus = Output.isLoss(newMisses) ? Status.LOSS : Status.PLAYING;
+        return new Output(
+                state.secret,
+                state.discovered,
+                state.guess,
+                newMisses,
+                newParts,
+                newStatus);
+    }
+
+    static Part[] order = Part.values();
+
+}
+
+```
+
+Requirements:
+- Edit ONLY Hangman.java in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

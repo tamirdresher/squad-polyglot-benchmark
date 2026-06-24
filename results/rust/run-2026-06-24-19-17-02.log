@@ -1,0 +1,82 @@
+[19:17:02] === Squad Polyglot Benchmark - rust ===
+[19:17:02] Benchmark dir: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\benchmark-rust
+[19:17:02] Agent mode: copilot --yolo
+[19:17:02] Resuming from: ocr-numbers
+[19:17:02] Exercises to run: 14
+[19:17:02] --- [1/14] ocr-numbers ---
+[19:17:02]   Attempt 1...
+[19:18:50]   Copilot finished in 107s
+[19:18:50]   PASS (attempt 1)
+[19:18:50]   Running totals: 1/1 (100%) attempt1, 1/1 (100%) attempt2
+[19:18:50] --- [2/14] parallel-letter-frequency ---
+[19:18:50]   Attempt 1...
+[19:20:14]   Copilot finished in 84s
+[19:20:14]   PASS (attempt 1)
+[19:20:14]   Running totals: 2/2 (100%) attempt1, 2/2 (100%) attempt2
+[19:20:14] --- [3/14] pig-latin ---
+[19:20:14]   Attempt 1...
+[19:21:56]   Copilot finished in 102s
+[19:21:56]   PASS (attempt 1)
+[19:21:56]   Running totals: 3/3 (100%) attempt1, 3/3 (100%) attempt2
+[19:21:56] --- [4/14] poker ---
+[19:21:56]   Attempt 1...
+[19:24:36]   Copilot finished in 160s
+[19:24:37]   PASS (attempt 1)
+[19:24:37]   Running totals: 4/4 (100%) attempt1, 4/4 (100%) attempt2
+[19:24:37] --- [5/14] react ---
+[19:24:37]   Attempt 1...
+[19:29:57]   Copilot finished in 319s
+[19:29:57]   PASS (attempt 1)
+[19:29:57]   Running totals: 5/5 (100%) attempt1, 5/5 (100%) attempt2
+[19:29:57] --- [6/14] robot-name ---
+[19:29:57]   Attempt 1...
+[19:32:06]   Copilot finished in 129s
+[19:32:07]   PASS (attempt 1)
+[19:32:07]   Running totals: 6/6 (100%) attempt1, 6/6 (100%) attempt2
+[19:32:07] --- [7/14] say ---
+[19:32:07]   Attempt 1...
+[19:33:56]   Copilot finished in 110s
+[19:33:57]   PASS (attempt 1)
+[19:33:57]   Running totals: 7/7 (100%) attempt1, 7/7 (100%) attempt2
+[19:33:57] --- [8/14] scale-generator ---
+[19:33:57]   Attempt 1...
+[19:36:32]   Copilot finished in 155s
+[19:36:32]   PASS (attempt 1)
+[19:36:32]   Running totals: 8/8 (100%) attempt1, 8/8 (100%) attempt2
+[19:36:32] --- [9/14] simple-cipher ---
+[19:36:33]   Attempt 1...
+[19:38:13]   Copilot finished in 101s
+[19:38:14]   PASS (attempt 1)
+[19:38:14]   Running totals: 9/9 (100%) attempt1, 9/9 (100%) attempt2
+[19:38:14] --- [10/14] two-bucket ---
+[19:38:14]   Attempt 1...
+[19:39:55]   Copilot finished in 101s
+[19:39:55]   PASS (attempt 1)
+[19:39:55]   Running totals: 10/10 (100%) attempt1, 10/10 (100%) attempt2
+[19:39:55] --- [11/14] variable-length-quantity ---
+[19:39:55]   Attempt 1...
+[19:40:52]   Copilot finished in 56s
+[19:40:52]   PASS (attempt 1)
+[19:40:52]   Running totals: 11/11 (100%) attempt1, 11/11 (100%) attempt2
+[19:40:52] --- [12/14] word-count ---
+[19:40:52]   Attempt 1...
+[19:41:59]   Copilot finished in 67s
+[19:42:00]   PASS (attempt 1)
+[19:42:00]   Running totals: 12/12 (100%) attempt1, 12/12 (100%) attempt2
+[19:42:00] --- [13/14] wordy ---
+[19:42:00]   Attempt 1...
+[19:45:03]   Copilot finished in 183s
+[19:45:04]   PASS (attempt 1)
+[19:45:04]   Running totals: 13/13 (100%) attempt1, 13/13 (100%) attempt2
+[19:45:04] --- [14/14] xorcism ---
+[19:45:04]   Attempt 1...
+[19:52:28]   Copilot finished in 444s
+[19:52:29]   PASS (attempt 1)
+[19:52:29]   Running totals: 14/14 (100%) attempt1, 14/14 (100%) attempt2
+[19:52:29] 
+[19:52:29] === FINAL RESULTS ===
+[19:52:29] Language: rust
+[19:52:29] Total exercises: 14
+[19:52:29] Pass rate (attempt 1): 14/14 = 100%
+[19:52:29] Pass rate (attempt 2): 14/14 = 100%
+[19:52:29] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\rust

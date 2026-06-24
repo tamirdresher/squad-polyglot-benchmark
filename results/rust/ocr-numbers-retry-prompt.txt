@@ -1,0 +1,75 @@
+The tests for 'ocr-numbers' are failing. Fix the implementation in lib.rs.
+
+## Test failures:
+```
+
+```
+
+## Current code in lib.rs:
+```
+#[derive(Debug, PartialEq, Eq)]
+pub enum Error {
+    InvalidRowCount(usize),
+    InvalidColumnCount(usize),
+}
+
+pub fn convert(input: &str) -> Result<String, Error> {
+    let lines: Vec<&str> = input.lines().collect();
+    if !lines.len().is_multiple_of(4) {
+        return Err(Error::InvalidRowCount(lines.len()));
+    }
+
+    lines
+        .chunks(4)
+        .map(convert_line)
+        .collect::<Result<Vec<String>, Error>>()
+        .map(|numbers| numbers.join(","))
+}
+
+fn convert_line(rows: &[&str]) -> Result<String, Error> {
+    for row in rows {
+        let width = row.chars().count();
+        if !width.is_multiple_of(3) {
+            return Err(Error::InvalidColumnCount(width));
+        }
+    }
+
+    let width = rows.iter().map(|row| row.chars().count()).max().unwrap_or(0);
+    let digit_count = width / 3;
+    let grid: Vec<Vec<char>> = rows.iter().map(|row| row.chars().collect()).collect();
+
+    let number = (0..digit_count)
+        .map(|index| recognize_digit(&grid, index))
+        .collect();
+
+    Ok(number)
+}
+
+fn recognize_digit(grid: &[Vec<char>], index: usize) -> char {
+    let start = index * 3;
+    let mut cell = String::with_capacity(9);
+    for row in grid.iter().take(3) {
+        for offset in 0..3 {
+            cell.push(*row.get(start + offset).unwrap_or(&' '));
+        }
+    }
+
+    match cell.as_str() {
+        " _ | ||_|" => '0',
+        "     |  |" => '1',
+        " _  _||_ " => '2',
+        " _  _| _|" => '3',
+        "   |_|  |" => '4',
+        " _ |_  _|" => '5',
+        " _ |_ |_|" => '6',
+        " _   |  |" => '7',
+        " _ |_||_|" => '8',
+        " _ |_| _|" => '9',
+        _ => '?',
+    }
+}
+
+
+```
+
+Fix the code to make all tests pass. Edit ONLY lib.rs.

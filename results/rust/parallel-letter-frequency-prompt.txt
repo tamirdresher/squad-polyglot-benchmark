@@ -1,0 +1,36 @@
+Implement the solution for the 'parallel-letter-frequency' exercise.
+
+## Instructions
+# Instructions
+
+Count the frequency of letters in texts using parallel computation.
+
+Parallelism is about doing things in parallel that can also be done sequentially.
+A common example is counting the frequency of letters.
+Employ parallelism to calculate the total frequency of each letter in a list of texts.
+
+
+## Current code in lib.rs:
+```
+use std::collections::HashMap;
+
+pub fn frequency(input: &[&str], worker_count: usize) -> HashMap<char, usize> {
+    todo!(
+        "Count the frequency of letters in the given input '{input:?}'. Ensure that you are using {} to process the input.",
+        match worker_count {
+            1 => "1 worker".to_string(),
+            _ => format!("{worker_count} workers"),
+        }
+    );
+}
+
+
+
+```
+
+Requirements:
+- Edit ONLY lib.rs in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

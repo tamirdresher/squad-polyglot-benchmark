@@ -1,0 +1,76 @@
+Implement the solution for the 'fizzy' exercise.
+
+## Instructions
+# Description
+
+FizzBuzz is a children's game of counting through the integers. For each of them, if it's divisible by three, substitute the word "fizz"; if divisible by five, substitute "buzz"; if both, say both; if neither, say the number. It is not particularly difficult to implement, though it enjoyed some popularity for a time as [a quick way to tell whether entry-level programming applicants knew how to program _at all_](https://blog.codinghorror.com/why-cant-programmers-program/).
+
+It has since fallen somewhat into disfavor for that task, because applicants began memorizing FizzBuzz implementations instead of learning to program.
+
+We're going to do something more interesting than the basics: your task in this exercise is to implement FizzBuzz:
+
+- with fully-customizable rules about what numbers produce what words
+- fully generic on a very restricted minimal trait set
+- such that it works just as well for the Collatz Sequence as for steadily increasing numbers
+- with convenient helpers to make its use ergonomic
+
+
+## Current code in lib.rs:
+```
+// the PhantomData instances in this file are just to stop compiler complaints
+// about missing generics; feel free to remove them
+
+/// A Matcher is a single rule of fizzbuzz: given a function on T, should
+/// a word be substituted in? If yes, which word?
+pub struct Matcher<T>(std::marker::PhantomData<T>);
+
+impl<T> Matcher<T> {
+    pub fn new<F, S>(_matcher: F, _subs: S) -> Matcher<T> {
+        todo!()
+    }
+}
+
+/// A Fizzy is a set of matchers, which may be applied to an iterator.
+///
+/// Strictly speaking, it's usually more idiomatic to use `iter.map()` than to
+/// consume an iterator with an `apply` method. Given a Fizzy instance, it's
+/// pretty straightforward to construct a closure which applies it to all
+/// elements of the iterator. However, we're using the `apply` pattern
+/// here because it's a simpler interface for students to implement.
+///
+/// Also, it's a good excuse to try out using impl trait.
+pub struct Fizzy<T>(std::marker::PhantomData<T>);
+
+impl<T> Fizzy<T> {
+    pub fn new() -> Self {
+        todo!()
+    }
+
+    // feel free to change the signature to `mut self` if you like
+    #[must_use]
+    pub fn add_matcher(self, _matcher: Matcher<T>) -> Self {
+        todo!()
+    }
+
+    /// map this fizzy onto every element of an iterator, returning a new iterator
+    pub fn apply<I>(self, _iter: I) -> impl Iterator<Item = String> {
+        // todo!() doesn't actually work, here; () is not an Iterator
+        // that said, this is probably not the actual implementation you desire
+        Vec::new().into_iter()
+    }
+}
+
+/// convenience function: return a Fizzy which applies the standard fizz-buzz rules
+pub fn fizz_buzz<T>() -> Fizzy<T> {
+    todo!()
+}
+
+
+```
+
+Requirements:
+- Edit ONLY lib.rs in the current directory
+- Implement all required functions/classes
+- Use only standard library unless imports already exist
+- Don't change function signatures or class names
+- Make all unit tests pass

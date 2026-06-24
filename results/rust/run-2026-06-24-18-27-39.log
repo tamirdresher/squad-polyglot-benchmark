@@ -1,0 +1,189 @@
+[18:27:39] === Squad Polyglot Benchmark - rust ===
+[18:27:39] Benchmark dir: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\benchmark-rust
+[18:27:39] Agent mode: copilot --yolo
+[18:27:39] Exercises to run: 30
+[18:27:39] --- [1/30] accumulate ---
+[18:27:39]   Attempt 1...
+[18:29:39]   Copilot finished in 120s
+[18:29:39]   PASS (attempt 1)
+[18:29:39]   Running totals: 1/1 (100%) attempt1, 1/1 (100%) attempt2
+[18:29:39] --- [2/30] acronym ---
+[18:29:39]   Attempt 1...
+[18:31:59]   Copilot finished in 140s
+[18:32:00]   PASS (attempt 1)
+[18:32:00]   Running totals: 2/2 (100%) attempt1, 2/2 (100%) attempt2
+[18:32:00] --- [3/30] alphametics ---
+[18:32:00]   Attempt 1...
+[18:34:58]   Copilot finished in 178s
+[18:34:58]   PASS (attempt 1)
+[18:34:58]   Running totals: 3/3 (100%) attempt1, 3/3 (100%) attempt2
+[18:34:58] --- [4/30] book-store ---
+[18:34:58]   Attempt 1...
+[18:36:28]   Copilot finished in 90s
+[18:36:28]   PASS (attempt 1)
+[18:36:28]   Running totals: 4/4 (100%) attempt1, 4/4 (100%) attempt2
+[18:36:28] --- [5/30] bowling ---
+[18:36:28]   Attempt 1...
+[18:39:43]   Copilot finished in 194s
+[18:39:43]   PASS (attempt 1)
+[18:39:43]   Running totals: 5/5 (100%) attempt1, 5/5 (100%) attempt2
+[18:39:43] --- [6/30] decimal ---
+[18:39:43]   Attempt 1...
+[18:46:28]   Copilot finished in 404s
+[18:46:28]   PASS (attempt 1)
+[18:46:28]   Running totals: 6/6 (100%) attempt1, 6/6 (100%) attempt2
+[18:46:28] --- [7/30] dot-dsl ---
+[18:46:28]   Attempt 1...
+[18:48:22]   Copilot finished in 114s
+[18:48:22]   PASS (attempt 1)
+[18:48:22]   Running totals: 7/7 (100%) attempt1, 7/7 (100%) attempt2
+[18:48:22] --- [8/30] doubly-linked-list ---
+[18:48:22]   Attempt 1...
+[18:56:00]   Copilot finished in 457s
+[18:56:01]   PASS (attempt 1)
+[18:56:01]   Running totals: 8/8 (100%) attempt1, 8/8 (100%) attempt2
+[18:56:01] --- [9/30] fizzy ---
+[18:56:01]   Attempt 1...
+[18:58:27]   Copilot finished in 146s
+[18:58:27]   PASS (attempt 1)
+[18:58:27]   Running totals: 9/9 (100%) attempt1, 9/9 (100%) attempt2
+[18:58:27] --- [10/30] forth ---
+[18:58:27]   Attempt 1...
+[19:02:20]   Copilot finished in 232s
+[19:02:20]   PASS (attempt 1)
+[19:02:20]   Running totals: 10/10 (100%) attempt1, 10/10 (100%) attempt2
+[19:02:20] --- [11/30] gigasecond ---
+[19:02:20]   Attempt 1...
+[19:03:14]   Copilot finished in 54s
+[19:03:15]   PASS (attempt 1)
+[19:03:15]   Running totals: 11/11 (100%) attempt1, 11/11 (100%) attempt2
+[19:03:15] --- [12/30] grade-school ---
+[19:03:15]   Attempt 1...
+[19:04:35]   Copilot finished in 81s
+[19:04:36]   PASS (attempt 1)
+[19:04:36]   Running totals: 12/12 (100%) attempt1, 12/12 (100%) attempt2
+[19:04:36] --- [13/30] grep ---
+[19:04:36]   Attempt 1...
+[19:06:15]   Copilot finished in 99s
+[19:06:16]   PASS (attempt 1)
+[19:06:16]   Running totals: 13/13 (100%) attempt1, 13/13 (100%) attempt2
+[19:06:16] --- [14/30] luhn-from ---
+[19:06:16]   Attempt 1...
+[19:07:42]   Copilot finished in 87s
+[19:07:43]   PASS (attempt 1)
+[19:07:43]   Running totals: 14/14 (100%) attempt1, 14/14 (100%) attempt2
+[19:07:43] --- [15/30] macros ---
+[19:07:43]   Attempt 1...
+[19:10:14]   Copilot finished in 151s
+[19:10:16]   PASS (attempt 1)
+[19:10:16]   Running totals: 15/15 (100%) attempt1, 15/15 (100%) attempt2
+[19:10:16] --- [16/30] nucleotide-codons ---
+[19:10:16]   Attempt 1...
+[19:12:29]   Copilot finished in 133s
+[19:12:29]   PASS (attempt 1)
+[19:12:29]   Running totals: 16/16 (100%) attempt1, 16/16 (100%) attempt2
+[19:12:29] --- [17/30] ocr-numbers ---
+[19:12:29]   Attempt 1...
+[19:15:51]   Copilot finished in 202s
+[19:15:52]   FAIL (attempt 1) - retrying...
+[19:15:52]   Attempt 2 finished in 0s
+[19:15:52]   FAIL (both attempts)
+[19:15:52]   Running totals: 16/17 (94.1%) attempt1, 16/17 (94.1%) attempt2
+[19:15:52] --- [18/30] parallel-letter-frequency ---
+[19:15:52]   Attempt 1...
+[19:15:52]   Copilot finished in 0s
+[19:15:52]   FAIL (attempt 1) - retrying...
+[19:15:52]   Attempt 2 finished in 0s
+[19:15:52]   FAIL (both attempts)
+[19:15:52]   Running totals: 16/18 (88.9%) attempt1, 16/18 (88.9%) attempt2
+[19:15:52] --- [19/30] pig-latin ---
+[19:15:52]   Attempt 1...
+[19:15:52]   Copilot finished in 0s
+[19:15:52]   FAIL (attempt 1) - retrying...
+[19:15:52]   Attempt 2 finished in 0s
+[19:15:52]   FAIL (both attempts)
+[19:15:52]   Running totals: 16/19 (84.2%) attempt1, 16/19 (84.2%) attempt2
+[19:15:52] --- [20/30] poker ---
+[19:15:52]   Attempt 1...
+[19:15:52]   Copilot finished in 0s
+[19:15:53]   FAIL (attempt 1) - retrying...
+[19:15:53]   Attempt 2 finished in 0s
+[19:15:53]   FAIL (both attempts)
+[19:15:53]   Running totals: 16/20 (80%) attempt1, 16/20 (80%) attempt2
+[19:15:53] --- [21/30] react ---
+[19:15:53]   Attempt 1...
+[19:15:53]   Copilot finished in 0s
+[19:15:53]   FAIL (attempt 1) - retrying...
+[19:15:53]   Attempt 2 finished in 0s
+[19:15:53]   FAIL (both attempts)
+[19:15:53]   Running totals: 16/21 (76.2%) attempt1, 16/21 (76.2%) attempt2
+[19:15:53] --- [22/30] robot-name ---
+[19:15:53]   Attempt 1...
+[19:15:53]   Copilot finished in 0s
+[19:15:53]   FAIL (attempt 1) - retrying...
+[19:15:53]   Attempt 2 finished in 0s
+[19:15:53]   FAIL (both attempts)
+[19:15:53]   Running totals: 16/22 (72.7%) attempt1, 16/22 (72.7%) attempt2
+[19:15:53] --- [23/30] say ---
+[19:15:53]   Attempt 1...
+[19:15:53]   Copilot finished in 0s
+[19:15:53]   FAIL (attempt 1) - retrying...
+[19:15:53]   Attempt 2 finished in 0s
+[19:15:53]   FAIL (both attempts)
+[19:15:53]   Running totals: 16/23 (69.6%) attempt1, 16/23 (69.6%) attempt2
+[19:15:53] --- [24/30] scale-generator ---
+[19:15:53]   Attempt 1...
+[19:15:54]   Copilot finished in 0s
+[19:15:54]   FAIL (attempt 1) - retrying...
+[19:15:54]   Attempt 2 finished in 0s
+[19:15:54]   FAIL (both attempts)
+[19:15:54]   Running totals: 16/24 (66.7%) attempt1, 16/24 (66.7%) attempt2
+[19:15:54] --- [25/30] simple-cipher ---
+[19:15:54]   Attempt 1...
+[19:15:54]   Copilot finished in 0s
+[19:15:54]   FAIL (attempt 1) - retrying...
+[19:15:54]   Attempt 2 finished in 0s
+[19:15:54]   FAIL (both attempts)
+[19:15:54]   Running totals: 16/25 (64%) attempt1, 16/25 (64%) attempt2
+[19:15:54] --- [26/30] two-bucket ---
+[19:15:54]   Attempt 1...
+[19:15:54]   Copilot finished in 0s
+[19:15:54]   FAIL (attempt 1) - retrying...
+[19:15:54]   Attempt 2 finished in 0s
+[19:15:54]   FAIL (both attempts)
+[19:15:54]   Running totals: 16/26 (61.5%) attempt1, 16/26 (61.5%) attempt2
+[19:15:54] --- [27/30] variable-length-quantity ---
+[19:15:54]   Attempt 1...
+[19:15:54]   Copilot finished in 0s
+[19:15:54]   FAIL (attempt 1) - retrying...
+[19:15:54]   Attempt 2 finished in 0s
+[19:15:54]   FAIL (both attempts)
+[19:15:54]   Running totals: 16/27 (59.3%) attempt1, 16/27 (59.3%) attempt2
+[19:15:54] --- [28/30] word-count ---
+[19:15:55]   Attempt 1...
+[19:15:55]   Copilot finished in 0s
+[19:15:55]   FAIL (attempt 1) - retrying...
+[19:15:55]   Attempt 2 finished in 0s
+[19:15:55]   FAIL (both attempts)
+[19:15:55]   Running totals: 16/28 (57.1%) attempt1, 16/28 (57.1%) attempt2
+[19:15:55] --- [29/30] wordy ---
+[19:15:55]   Attempt 1...
+[19:15:55]   Copilot finished in 0s
+[19:15:55]   FAIL (attempt 1) - retrying...
+[19:15:55]   Attempt 2 finished in 0s
+[19:15:55]   FAIL (both attempts)
+[19:15:55]   Running totals: 16/29 (55.2%) attempt1, 16/29 (55.2%) attempt2
+[19:15:55] --- [30/30] xorcism ---
+[19:15:55]   Attempt 1...
+[19:15:55]   Copilot finished in 0s
+[19:15:55]   FAIL (attempt 1) - retrying...
+[19:15:55]   Attempt 2 finished in 0s
+[19:15:55]   FAIL (both attempts)
+[19:15:55]   Running totals: 16/30 (53.3%) attempt1, 16/30 (53.3%) attempt2
+[19:15:55] 
+[19:15:55] === FINAL RESULTS ===
+[19:15:55] Language: rust
+[19:15:55] Total exercises: 30
+[19:15:55] Pass rate (attempt 1): 16/30 = 53.3%
+[19:15:55] Pass rate (attempt 2): 16/30 = 53.3%
+[19:15:55] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\rust
