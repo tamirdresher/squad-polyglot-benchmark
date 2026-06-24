@@ -199,3 +199,48 @@
 [18:06:26]   Running totals: 39/39 (100%) attempt1, 39/39 (100%) attempt2
 [18:06:26] --- [40/47] tree-building ---
 [18:06:26]   Attempt 1...
+[18:08:23]   Copilot finished in 117s
+[18:08:26]   PASS (attempt 1)
+[18:08:26]   Running totals: 40/40 (100%) attempt1, 40/40 (100%) attempt2
+[18:08:26] --- [41/47] twelve-days ---
+[18:08:27]   Attempt 1...
+[18:09:57]   Copilot finished in 91s
+[18:10:01]   PASS (attempt 1)
+[18:10:01]   Running totals: 41/41 (100%) attempt1, 41/41 (100%) attempt2
+[18:10:01] --- [42/47] two-bucket ---
+[18:10:01]   Attempt 1...
+[18:13:14]   Copilot finished in 193s
+[18:13:17]   PASS (attempt 1)
+[18:13:17]   Running totals: 42/42 (100%) attempt1, 42/42 (100%) attempt2
+[18:13:17] --- [43/47] variable-length-quantity ---
+[18:13:17]   Attempt 1...
+[18:16:29]   Copilot finished in 192s
+[18:16:32]   PASS (attempt 1)
+[18:16:32]   Running totals: 43/43 (100%) attempt1, 43/43 (100%) attempt2
+[18:16:32] --- [44/47] word-search ---
+[18:16:32]   Attempt 1...
+[18:19:06]   Copilot finished in 154s
+[18:19:10]   PASS (attempt 1)
+[18:19:10]   Running totals: 44/44 (100%) attempt1, 44/44 (100%) attempt2
+[18:19:10] --- [45/47] wordy ---
+[18:19:10]   Attempt 1...
+[18:21:01]   Copilot finished in 111s
+[18:21:04]   PASS (attempt 1)
+[18:21:04]   Running totals: 45/45 (100%) attempt1, 45/45 (100%) attempt2
+[18:21:04] --- [46/47] zebra-puzzle ---
+[18:21:04]   Attempt 1...
+[18:22:49]   Copilot finished in 105s
+[18:22:52]   PASS (attempt 1)
+[18:22:52]   Running totals: 46/46 (100%) attempt1, 46/46 (100%) attempt2
+[18:22:52] --- [47/47] zipper ---
+[18:22:52]   Attempt 1...
+[18:27:08]   Copilot finished in 256s
+[18:27:11]   PASS (attempt 1)
+[18:27:11]   Running totals: 47/47 (100%) attempt1, 47/47 (100%) attempt2
+[18:27:11] 
+[18:27:11] === FINAL RESULTS ===
+[18:27:11] Language: java
+[18:27:11] Total exercises: 47
+[18:27:11] Pass rate (attempt 1): 47/47 = 100%
+[18:27:12] Pass rate (attempt 2): 47/47 = 100%
+[18:27:12] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\java

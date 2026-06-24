@@ -1,9 +1,9 @@
 {
   "rate_2": 100.0,
-  "pass_2": 39,
+  "pass_2": 47,
   "rate_1": 100.0,
   "language": "java",
-  "pass_1": 39,
+  "pass_1": 47,
   "exercises": [
     {
       "time_1": 194.8740209,
@@ -277,7 +277,63 @@
       "exercise": "transpose",
       "pass_2": true,
       "time_2": 0
+    },
+    {
+      "time_1": 116.6532359,
+      "pass_1": true,
+      "exercise": "tree-building",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 90.7058443,
+      "pass_1": true,
+      "exercise": "twelve-days",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 192.9042669,
+      "pass_1": true,
+      "exercise": "two-bucket",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 191.6565902,
+      "pass_1": true,
+      "exercise": "variable-length-quantity",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 154.1827729,
+      "pass_1": true,
+      "exercise": "word-search",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 110.7747136,
+      "pass_1": true,
+      "exercise": "wordy",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 104.8754084,
+      "pass_1": true,
+      "exercise": "zebra-puzzle",
+      "pass_2": true,
+      "time_2": 0
+    },
+    {
+      "time_1": 255.8880547,
+      "pass_1": true,
+      "exercise": "zipper",
+      "pass_2": true,
+      "time_2": 0
     }
   ],
-  "total": 39
+  "total": 47
 }
