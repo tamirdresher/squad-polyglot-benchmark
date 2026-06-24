@@ -1,0 +1,847 @@
+[
+  {
+    "name": "affine-cipher",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\affine-cipher"
+  },
+  {
+    "name": "beer-song",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\beer-song"
+  },
+  {
+    "name": "book-store",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\book-store"
+  },
+  {
+    "name": "bottle-song",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\bottle-song"
+  },
+  {
+    "name": "bowling",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\bowling"
+  },
+  {
+    "name": "connect",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\connect"
+  },
+  {
+    "name": "dominoes",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\dominoes"
+  },
+  {
+    "name": "dot-dsl",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\dot-dsl"
+  },
+  {
+    "name": "food-chain",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\food-chain"
+  },
+  {
+    "name": "forth",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\forth"
+  },
+  {
+    "name": "go-counting",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\go-counting"
+  },
+  {
+    "name": "grade-school",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\grade-school"
+  },
+  {
+    "name": "grep",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\grep"
+  },
+  {
+    "name": "hangman",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\hangman"
+  },
+  {
+    "name": "list-ops",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\list-ops"
+  },
+  {
+    "name": "paasio",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\paasio"
+  },
+  {
+    "name": "phone-number",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\phone-number"
+  },
+  {
+    "name": "pig-latin",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\pig-latin"
+  },
+  {
+    "name": "poker",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\poker"
+  },
+  {
+    "name": "pov",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\pov"
+  },
+  {
+    "name": "proverb",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\proverb"
+  },
+  {
+    "name": "react",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\react"
+  },
+  {
+    "name": "rest-api",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\rest-api"
+  },
+  {
+    "name": "robot-name",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\robot-name"
+  },
+  {
+    "name": "scale-generator",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\scale-generator"
+  },
+  {
+    "name": "sgf-parsing",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\sgf-parsing"
+  },
+  {
+    "name": "simple-linked-list",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\simple-linked-list"
+  },
+  {
+    "name": "transpose",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\transpose"
+  },
+  {
+    "name": "tree-building",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\tree-building"
+  },
+  {
+    "name": "two-bucket",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\two-bucket"
+  },
+  {
+    "name": "variable-length-quantity",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\variable-length-quantity"
+  },
+  {
+    "name": "wordy",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\wordy"
+  },
+  {
+    "name": "zebra-puzzle",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\zebra-puzzle"
+  },
+  {
+    "name": "zipper",
+    "language": "python",
+    "path": "exercises\\python\\exercises\\practice\\zipper"
+  },
+  {
+    "name": "alphametics",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\alphametics"
+  },
+  {
+    "name": "beer-song",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\beer-song"
+  },
+  {
+    "name": "book-store",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\book-store"
+  },
+  {
+    "name": "bottle-song",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\bottle-song"
+  },
+  {
+    "name": "bowling",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\bowling"
+  },
+  {
+    "name": "connect",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\connect"
+  },
+  {
+    "name": "counter",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\counter"
+  },
+  {
+    "name": "crypto-square",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\crypto-square"
+  },
+  {
+    "name": "dnd-character",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\dnd-character"
+  },
+  {
+    "name": "dominoes",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\dominoes"
+  },
+  {
+    "name": "error-handling",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\error-handling"
+  },
+  {
+    "name": "food-chain",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\food-chain"
+  },
+  {
+    "name": "forth",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\forth"
+  },
+  {
+    "name": "hexadecimal",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\hexadecimal"
+  },
+  {
+    "name": "kindergarten-garden",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\kindergarten-garden"
+  },
+  {
+    "name": "ledger",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\ledger"
+  },
+  {
+    "name": "markdown",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\markdown"
+  },
+  {
+    "name": "matrix",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\matrix"
+  },
+  {
+    "name": "octal",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\octal"
+  },
+  {
+    "name": "paasio",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\paasio"
+  },
+  {
+    "name": "palindrome-products",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\palindrome-products"
+  },
+  {
+    "name": "pig-latin",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\pig-latin"
+  },
+  {
+    "name": "poker",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\poker"
+  },
+  {
+    "name": "pov",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\pov"
+  },
+  {
+    "name": "protein-translation",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\protein-translation"
+  },
+  {
+    "name": "react",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\react"
+  },
+  {
+    "name": "robot-simulator",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\robot-simulator"
+  },
+  {
+    "name": "say",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\say"
+  },
+  {
+    "name": "scale-generator",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\scale-generator"
+  },
+  {
+    "name": "simple-linked-list",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\simple-linked-list"
+  },
+  {
+    "name": "sublist",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\sublist"
+  },
+  {
+    "name": "transpose",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\transpose"
+  },
+  {
+    "name": "tree-building",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\tree-building"
+  },
+  {
+    "name": "trinary",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\trinary"
+  },
+  {
+    "name": "two-bucket",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\two-bucket"
+  },
+  {
+    "name": "variable-length-quantity",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\variable-length-quantity"
+  },
+  {
+    "name": "word-search",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\word-search"
+  },
+  {
+    "name": "wordy",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\wordy"
+  },
+  {
+    "name": "zebra-puzzle",
+    "language": "go",
+    "path": "exercises\\go\\exercises\\practice\\zebra-puzzle"
+  },
+  {
+    "name": "affine-cipher",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\affine-cipher"
+  },
+  {
+    "name": "alphametics",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\alphametics"
+  },
+  {
+    "name": "beer-song",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\beer-song"
+  },
+  {
+    "name": "binary",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\binary"
+  },
+  {
+    "name": "book-store",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\book-store"
+  },
+  {
+    "name": "bottle-song",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\bottle-song"
+  },
+  {
+    "name": "bowling",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\bowling"
+  },
+  {
+    "name": "complex-numbers",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\complex-numbers"
+  },
+  {
+    "name": "connect",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\connect"
+  },
+  {
+    "name": "food-chain",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\food-chain"
+  },
+  {
+    "name": "forth",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\forth"
+  },
+  {
+    "name": "go-counting",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\go-counting"
+  },
+  {
+    "name": "grade-school",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\grade-school"
+  },
+  {
+    "name": "grep",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\grep"
+  },
+  {
+    "name": "house",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\house"
+  },
+  {
+    "name": "killer-sudoku-helper",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\killer-sudoku-helper"
+  },
+  {
+    "name": "ledger",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\ledger"
+  },
+  {
+    "name": "list-ops",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\list-ops"
+  },
+  {
+    "name": "meetup",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\meetup"
+  },
+  {
+    "name": "ocr-numbers",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\ocr-numbers"
+  },
+  {
+    "name": "palindrome-products",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\palindrome-products"
+  },
+  {
+    "name": "parallel-letter-frequency",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\parallel-letter-frequency"
+  },
+  {
+    "name": "phone-number",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\phone-number"
+  },
+  {
+    "name": "pig-latin",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\pig-latin"
+  },
+  {
+    "name": "poker",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\poker"
+  },
+  {
+    "name": "promises",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\promises"
+  },
+  {
+    "name": "queen-attack",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\queen-attack"
+  },
+  {
+    "name": "rational-numbers",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\rational-numbers"
+  },
+  {
+    "name": "react",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\react"
+  },
+  {
+    "name": "rectangles",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\rectangles"
+  },
+  {
+    "name": "resistor-color-trio",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\resistor-color-trio"
+  },
+  {
+    "name": "rest-api",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\rest-api"
+  },
+  {
+    "name": "robot-name",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\robot-name"
+  },
+  {
+    "name": "say",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\say"
+  },
+  {
+    "name": "scale-generator",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\scale-generator"
+  },
+  {
+    "name": "simple-linked-list",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\simple-linked-list"
+  },
+  {
+    "name": "space-age",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\space-age"
+  },
+  {
+    "name": "state-of-tic-tac-toe",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\state-of-tic-tac-toe"
+  },
+  {
+    "name": "sum-of-multiples",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\sum-of-multiples"
+  },
+  {
+    "name": "tournament",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\tournament"
+  },
+  {
+    "name": "transpose",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\transpose"
+  },
+  {
+    "name": "triangle",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\triangle"
+  },
+  {
+    "name": "twelve-days",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\twelve-days"
+  },
+  {
+    "name": "two-bucket",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\two-bucket"
+  },
+  {
+    "name": "variable-length-quantity",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\variable-length-quantity"
+  },
+  {
+    "name": "word-search",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\word-search"
+  },
+  {
+    "name": "wordy",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\wordy"
+  },
+  {
+    "name": "zebra-puzzle",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\zebra-puzzle"
+  },
+  {
+    "name": "zipper",
+    "language": "javascript",
+    "path": "exercises\\javascript\\exercises\\practice\\zipper"
+  },
+  {
+    "name": "affine-cipher",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\affine-cipher"
+  },
+  {
+    "name": "all-your-base",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\all-your-base"
+  },
+  {
+    "name": "alphametics",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\alphametics"
+  },
+  {
+    "name": "bank-account",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\bank-account"
+  },
+  {
+    "name": "book-store",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\book-store"
+  },
+  {
+    "name": "bottle-song",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\bottle-song"
+  },
+  {
+    "name": "bowling",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\bowling"
+  },
+  {
+    "name": "change",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\change"
+  },
+  {
+    "name": "circular-buffer",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\circular-buffer"
+  },
+  {
+    "name": "connect",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\connect"
+  },
+  {
+    "name": "custom-set",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\custom-set"
+  },
+  {
+    "name": "dominoes",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\dominoes"
+  },
+  {
+    "name": "food-chain",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\food-chain"
+  },
+  {
+    "name": "forth",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\forth"
+  },
+  {
+    "name": "go-counting",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\go-counting"
+  },
+  {
+    "name": "hangman",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\hangman"
+  },
+  {
+    "name": "house",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\house"
+  },
+  {
+    "name": "kindergarten-garden",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\kindergarten-garden"
+  },
+  {
+    "name": "ledger",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\ledger"
+  },
+  {
+    "name": "mazy-mice",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\mazy-mice"
+  },
+  {
+    "name": "ocr-numbers",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\ocr-numbers"
+  },
+  {
+    "name": "palindrome-products",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\palindrome-products"
+  },
+  {
+    "name": "phone-number",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\phone-number"
+  },
+  {
+    "name": "pig-latin",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\pig-latin"
+  },
+  {
+    "name": "poker",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\poker"
+  },
+  {
+    "name": "pov",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\pov"
+  },
+  {
+    "name": "protein-translation",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\protein-translation"
+  },
+  {
+    "name": "pythagorean-triplet",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\pythagorean-triplet"
+  },
+  {
+    "name": "queen-attack",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\queen-attack"
+  },
+  {
+    "name": "rational-numbers",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\rational-numbers"
+  },
+  {
+    "name": "react",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\react"
+  },
+  {
+    "name": "resistor-color-trio",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\resistor-color-trio"
+  },
+  {
+    "name": "rest-api",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\rest-api"
+  },
+  {
+    "name": "satellite",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\satellite"
+  },
+  {
+    "name": "series",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\series"
+  },
+  {
+    "name": "sgf-parsing",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\sgf-parsing"
+  },
+  {
+    "name": "simple-linked-list",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\simple-linked-list"
+  },
+  {
+    "name": "state-of-tic-tac-toe",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\state-of-tic-tac-toe"
+  },
+  {
+    "name": "transpose",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\transpose"
+  },
+  {
+    "name": "tree-building",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\tree-building"
+  },
+  {
+    "name": "twelve-days",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\twelve-days"
+  },
+  {
+    "name": "two-bucket",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\two-bucket"
+  },
+  {
+    "name": "variable-length-quantity",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\variable-length-quantity"
+  },
+  {
+    "name": "word-search",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\word-search"
+  },
+  {
+    "name": "wordy",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\wordy"
+  },
+  {
+    "name": "zebra-puzzle",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\zebra-puzzle"
+  },
+  {
+    "name": "zipper",
+    "language": "java",
+    "path": "exercises\\java\\exercises\\practice\\zipper"
+  }
+]

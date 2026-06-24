@@ -1,0 +1,5 @@
+exercises/
+results/
+__pycache__/
+*.pyc
+node_modules/
