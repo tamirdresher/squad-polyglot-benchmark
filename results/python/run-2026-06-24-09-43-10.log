@@ -1,0 +1,26 @@
+[09:43:10] === Squad Polyglot Benchmark - python ===
+[09:43:10] Benchmark dir: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\benchmark-python
+[09:43:10] Agent mode: copilot --yolo
+[09:43:10] Exercises to run: 3
+[09:43:10] --- [1/3] affine-cipher ---
+[09:43:10]   Attempt 1...
+[09:44:32]   Copilot finished in 82s
+[09:44:42]   PASS (attempt 1)
+[09:44:42]   Running totals: 1/1 (100%) attempt1, 1/1 (100%) attempt2
+[09:44:42] --- [2/3] beer-song ---
+[09:44:43]   Attempt 1...
+[09:45:47]   Copilot finished in 64s
+[09:45:56]   PASS (attempt 1)
+[09:45:56]   Running totals: 2/2 (100%) attempt1, 2/2 (100%) attempt2
+[09:45:56] --- [3/3] book-store ---
+[09:45:56]   Attempt 1...
+[09:47:15]   Copilot finished in 79s
+[09:47:23]   PASS (attempt 1)
+[09:47:23]   Running totals: 3/3 (100%) attempt1, 3/3 (100%) attempt2
+[09:47:23] 
+[09:47:23] === FINAL RESULTS ===
+[09:47:23] Language: python
+[09:47:23] Total exercises: 3
+[09:47:23] Pass rate (attempt 1): 3/3 = 100%
+[09:47:23] Pass rate (attempt 2): 3/3 = 100%
+[09:47:23] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\python

@@ -1,0 +1,283 @@
+{
+  "total": 39,
+  "exercises": [
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "alphametics",
+      "time_1": 202.5824546
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "beer-song",
+      "time_1": 98.4436582
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "book-store",
+      "time_1": 97.5997197
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "bottle-song",
+      "time_1": 56.3805545
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "bowling",
+      "time_1": 183.2493815
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "connect",
+      "time_1": 118.7615358
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "counter",
+      "time_1": 310.7676849
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "crypto-square",
+      "time_1": 69.8200717
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "dnd-character",
+      "time_1": 54.5752791
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "dominoes",
+      "time_1": 125.3324416
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "error-handling",
+      "time_1": 271.3497339
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "food-chain",
+      "time_1": 90.9477812
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "forth",
+      "time_1": 172.9476896
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "hexadecimal",
+      "time_1": 103.702034
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "kindergarten-garden",
+      "time_1": 123.2422671
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "ledger",
+      "time_1": 361.3989796
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "markdown",
+      "time_1": 148.8764549
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "matrix",
+      "time_1": 124.7167528
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "octal",
+      "time_1": 57.8141406
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "paasio",
+      "time_1": 181.3066307
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "palindrome-products",
+      "time_1": 88.6949965
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "pig-latin",
+      "time_1": 77.5002776
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "poker",
+      "time_1": 137.097497
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "pov",
+      "time_1": 145.0961722
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "protein-translation",
+      "time_1": 66.6862805
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "react",
+      "time_1": 481.6776598
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "robot-simulator",
+      "time_1": 418.679913
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "say",
+      "time_1": 62.9800134
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "scale-generator",
+      "time_1": 110.5697731
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "simple-linked-list",
+      "time_1": 83.8746557
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "sublist",
+      "time_1": 157.3361698
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "transpose",
+      "time_1": 84.2030897
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "tree-building",
+      "time_1": 117.8170266
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "trinary",
+      "time_1": 89.7213731
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "two-bucket",
+      "time_1": 126.7579677
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "variable-length-quantity",
+      "time_1": 70.2141819
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "word-search",
+      "time_1": 119.6464723
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "wordy",
+      "time_1": 91.5191939
+    },
+    {
+      "pass_1": true,
+      "time_2": 0,
+      "pass_2": true,
+      "exercise": "zebra-puzzle",
+      "time_1": 110.2945018
+    }
+  ],
+  "pass_2": 39,
+  "rate_2": 100.0,
+  "pass_1": 39,
+  "rate_1": 100.0,
+  "language": "go"
+}
