@@ -67,21 +67,137 @@ pub enum Error {
     GameComplete,
 }
 
-pub struct BowlingGame {}
+/// Snapshot of the game's progress derived by replaying the recorded rolls.
+struct State {
+    /// Whether all ten frames (and any fill balls) have been rolled.
+    complete: bool,
+    /// Pins still standing for the next throw (only meaningful when not complete).
+    pins_available: u16,
+}
+
+#[derive(Default)]
+pub struct BowlingGame {
+    rolls: Vec<u16>,
+}
 
 impl BowlingGame {
     pub fn new() -> Self {
-        todo!();
+        BowlingGame::default()
     }
 
     pub fn roll(&mut self, pins: u16) -> Result<(), Error> {
-        todo!("Record that {pins} pins have been scored");
+        let state = self.analyze();
+        if state.complete {
+            return Err(Error::GameComplete);
+        }
+        if pins > state.pins_available {
+            return Err(Error::NotEnoughPinsLeft);
+        }
+        self.rolls.push(pins);
+        Ok(())
     }
 
     pub fn score(&self) -> Option<u16> {
-        todo!("Return the score if the game is complete, or None if not.");
+        if !self.analyze().complete {
+            return None;
+        }
+        Some(self.compute_score())
+    }
+
+    /// Walk the recorded rolls frame by frame to determine whether the game is
+    /// finished and how many pins are available for the next throw.
+    fn analyze(&self) -> State {
+        let rolls = &self.rolls;
+        let mut i = 0;
+
+        for frame in 0..10 {
+            if frame < 9 {
+                // Frames 1-9.
+                match rolls.get(i) {
+                    None => return State { complete: false, pins_available: 10 },
+                    Some(&10) => {
+                        // Strike: frame ends after a single roll.
+                        i += 1;
+                    }
+                    Some(&first) => match rolls.get(i + 1) {
+                        None => {
+                            return State { complete: false, pins_available: 10 - first }
+                        }
+                        Some(_) => i += 2,
+                    },
+                }
+            } else {
+                // Tenth frame, including any fill balls.
+                let first = match rolls.get(i) {
+                    None => return State { complete: false, pins_available: 10 },
+                    Some(&p) => p,
+                };
+
+                if first == 10 {
+                    // Strike grants two fill balls.
+                    let second = match rolls.get(i + 1) {
+                        None => return State { complete: false, pins_available: 10 },
+                        Some(&p) => p,
+                    };
+                    match rolls.get(i + 2) {
+                        None => {
+                            // Second fill ball: pins reset only if the first fill
+                            // ball was itself a strike.
+                            let pins_available = if second == 10 { 10 } else { 10 - second };
+                            return State { complete: false, pins_available };
+                        }
+                        Some(_) => return State { complete: true, pins_available: 0 },
+                    }
+                }
+
+                let second = match rolls.get(i + 1) {
+                    None => return State { complete: false, pins_available: 10 - first },
+                    Some(&p) => p,
+                };
+
+                if first + second == 10 {
+                    // Spare grants one fill ball.
+                    match rolls.get(i + 2) {
+                        None => return State { complete: false, pins_available: 10 },
+                        Some(_) => return State { complete: true, pins_available: 0 },
+                    }
+                }
+
+                // Open tenth frame: done after two rolls.
+                return State { complete: true, pins_available: 0 };
+            }
+        }
+
+        State { complete: true, pins_available: 0 }
+    }
+
+    /// Sum the score across all ten frames. Only called once the game is
+    /// complete, so every bonus roll referenced here is guaranteed to exist.
+    fn compute_score(&self) -> u16 {
+        let rolls = &self.rolls;
+        let mut total = 0;
+        let mut i = 0;
+
+        for _ in 0..10 {
+            if rolls[i] == 10 {
+                // Strike: ten plus the next two rolls.
+                total += 10 + rolls[i + 1] + rolls[i + 2];
+                i += 1;
+            } else if rolls[i] + rolls[i + 1] == 10 {
+                // Spare: ten plus the next roll.
+                total += 10 + rolls[i + 2];
+                i += 2;
+            } else {
+                // Open frame: just the two rolls.
+                total += rolls[i] + rolls[i + 1];
+                i += 2;
+            }
+        }
+
+        total
     }
 }
+
 
 
 ```

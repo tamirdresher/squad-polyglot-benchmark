@@ -127,7 +127,6 @@ impl<'a> Xorcism<'a> {
 }
 
 
-
 ```
 
 Requirements:

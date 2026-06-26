@@ -27,10 +27,17 @@ Solve this one yourself using other basic tools instead.
 
 ## Current code in lib.rs:
 ```
-/// What should the type of _function be?
-pub fn map(input: Vec<i32>, _function: ???) -> Vec<i32> {
-    todo!("Transform input vector {input:?} using passed function");
+pub fn map<T, U, F>(input: Vec<T>, mut function: F) -> Vec<U>
+where
+    F: FnMut(T) -> U,
+{
+    let mut result = Vec::new();
+    for item in input {
+        result.push(function(item));
+    }
+    result
 }
+
 
 
 ```

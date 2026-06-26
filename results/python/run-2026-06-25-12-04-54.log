@@ -1,0 +1,176 @@
+[12:04:54] === Squad Polyglot Benchmark - python ===
+[12:04:54] Benchmark dir: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\benchmark-python
+[12:04:54] Agent mode: copilot --yolo --agent squad
+[12:04:54] Exercises to run: 33
+[12:04:54] --- [1/33] beer-song ---
+[12:04:54]   Attempt 1...
+[12:06:50]   Copilot finished in 116s
+[12:07:00]   PASS (attempt 1)
+[12:07:00]   Running totals: 1/1 (100%) attempt1, 1/1 (100%) attempt2
+[12:07:00] --- [2/33] book-store ---
+[12:07:00]   Attempt 1...
+[12:08:32]   Copilot finished in 93s
+[12:08:41]   PASS (attempt 1)
+[12:08:41]   Running totals: 2/2 (100%) attempt1, 2/2 (100%) attempt2
+[12:08:41] --- [3/33] bottle-song ---
+[12:08:41]   Attempt 1...
+[12:10:01]   Copilot finished in 80s
+[12:10:10]   PASS (attempt 1)
+[12:10:10]   Running totals: 3/3 (100%) attempt1, 3/3 (100%) attempt2
+[12:10:10] --- [4/33] bowling ---
+[12:10:10]   Attempt 1...
+[12:13:19]   Copilot finished in 188s
+[12:13:27]   PASS (attempt 1)
+[12:13:27]   Running totals: 4/4 (100%) attempt1, 4/4 (100%) attempt2
+[12:13:27] --- [5/33] connect ---
+[12:13:28]   Attempt 1...
+[12:15:04]   Copilot finished in 97s
+[12:15:13]   PASS (attempt 1)
+[12:15:13]   Running totals: 5/5 (100%) attempt1, 5/5 (100%) attempt2
+[12:15:13] --- [6/33] dominoes ---
+[12:15:14]   Attempt 1...
+[12:16:41]   Copilot finished in 87s
+[12:16:49]   PASS (attempt 1)
+[12:16:49]   Running totals: 6/6 (100%) attempt1, 6/6 (100%) attempt2
+[12:16:49] --- [7/33] dot-dsl ---
+[12:16:49]   Attempt 1...
+[12:18:27]   Copilot finished in 97s
+[12:18:36]   PASS (attempt 1)
+[12:18:36]   Running totals: 7/7 (100%) attempt1, 7/7 (100%) attempt2
+[12:18:36] --- [8/33] food-chain ---
+[12:18:36]   Attempt 1...
+[12:20:28]   Copilot finished in 112s
+[12:20:37]   PASS (attempt 1)
+[12:20:38]   Running totals: 8/8 (100%) attempt1, 8/8 (100%) attempt2
+[12:20:38] --- [9/33] forth ---
+[12:20:38]   Attempt 1...
+[12:23:41]   Copilot finished in 184s
+[12:23:50]   PASS (attempt 1)
+[12:23:50]   Running totals: 9/9 (100%) attempt1, 9/9 (100%) attempt2
+[12:23:50] --- [10/33] go-counting ---
+[12:23:50]   Attempt 1...
+[12:25:51]   Copilot finished in 121s
+[12:25:59]   PASS (attempt 1)
+[12:26:00]   Running totals: 10/10 (100%) attempt1, 10/10 (100%) attempt2
+[12:26:00] --- [11/33] grade-school ---
+[12:26:00]   Attempt 1...
+[12:27:07]   Copilot finished in 68s
+[12:27:17]   PASS (attempt 1)
+[12:27:17]   Running totals: 11/11 (100%) attempt1, 11/11 (100%) attempt2
+[12:27:17] --- [12/33] grep ---
+[12:27:17]   Attempt 1...
+[12:28:36]   Copilot finished in 79s
+[12:28:46]   PASS (attempt 1)
+[12:28:46]   Running totals: 12/12 (100%) attempt1, 12/12 (100%) attempt2
+[12:28:46] --- [13/33] hangman ---
+[12:28:46]   Attempt 1...
+[12:30:25]   Copilot finished in 99s
+[12:30:34]   PASS (attempt 1)
+[12:30:34]   Running totals: 13/13 (100%) attempt1, 13/13 (100%) attempt2
+[12:30:34] --- [14/33] list-ops ---
+[12:30:34]   Attempt 1...
+[12:32:33]   Copilot finished in 119s
+[12:32:41]   PASS (attempt 1)
+[12:32:41]   Running totals: 14/14 (100%) attempt1, 14/14 (100%) attempt2
+[12:32:41] --- [15/33] paasio ---
+[12:32:41]   Attempt 1...
+[12:37:32]   Copilot finished in 291s
+[12:37:43]   PASS (attempt 1)
+[12:37:43]   Running totals: 15/15 (100%) attempt1, 15/15 (100%) attempt2
+[12:37:43] --- [16/33] phone-number ---
+[12:37:43]   Attempt 1...
+[12:39:29]   Copilot finished in 105s
+[12:39:38]   PASS (attempt 1)
+[12:39:38]   Running totals: 16/16 (100%) attempt1, 16/16 (100%) attempt2
+[12:39:38] --- [17/33] pig-latin ---
+[12:39:38]   Attempt 1...
+[12:41:06]   Copilot finished in 88s
+[12:41:15]   PASS (attempt 1)
+[12:41:15]   Running totals: 17/17 (100%) attempt1, 17/17 (100%) attempt2
+[12:41:15] --- [18/33] poker ---
+[12:41:15]   Attempt 1...
+[12:43:34]   Copilot finished in 139s
+[12:43:43]   PASS (attempt 1)
+[12:43:43]   Running totals: 18/18 (100%) attempt1, 18/18 (100%) attempt2
+[12:43:43] --- [19/33] pov ---
+[12:43:43]   Attempt 1...
+[12:46:13]   Copilot finished in 150s
+[12:46:23]   PASS (attempt 1)
+[12:46:23]   Running totals: 19/19 (100%) attempt1, 19/19 (100%) attempt2
+[12:46:24] --- [20/33] proverb ---
+[12:46:24]   Attempt 1...
+[12:47:29]   Copilot finished in 66s
+[12:47:43]   PASS (attempt 1)
+[12:47:43]   Running totals: 20/20 (100%) attempt1, 20/20 (100%) attempt2
+[12:47:43] --- [21/33] react ---
+[12:47:43]   Attempt 1...
+[12:49:44]   Copilot finished in 121s
+[12:49:54]   PASS (attempt 1)
+[12:49:54]   Running totals: 21/21 (100%) attempt1, 21/21 (100%) attempt2
+[12:49:54] --- [22/33] rest-api ---
+[12:49:54]   Attempt 1...
+[12:52:19]   Copilot finished in 145s
+[12:52:29]   PASS (attempt 1)
+[12:52:29]   Running totals: 22/22 (100%) attempt1, 22/22 (100%) attempt2
+[12:52:29] --- [23/33] robot-name ---
+[12:52:29]   Attempt 1...
+[12:53:56]   Copilot finished in 87s
+[12:54:05]   PASS (attempt 1)
+[12:54:05]   Running totals: 23/23 (100%) attempt1, 23/23 (100%) attempt2
+[12:54:05] --- [24/33] scale-generator ---
+[12:54:05]   Attempt 1...
+[12:56:04]   Copilot finished in 119s
+[12:56:14]   PASS (attempt 1)
+[12:56:14]   Running totals: 24/24 (100%) attempt1, 24/24 (100%) attempt2
+[12:56:14] --- [25/33] sgf-parsing ---
+[12:56:14]   Attempt 1...
+[12:59:47]   Copilot finished in 213s
+[12:59:56]   PASS (attempt 1)
+[12:59:56]   Running totals: 25/25 (100%) attempt1, 25/25 (100%) attempt2
+[12:59:56] --- [26/33] simple-linked-list ---
+[12:59:56]   Attempt 1...
+[13:01:32]   Copilot finished in 96s
+[13:01:43]   PASS (attempt 1)
+[13:01:43]   Running totals: 26/26 (100%) attempt1, 26/26 (100%) attempt2
+[13:01:43] --- [27/33] transpose ---
+[13:01:43]   Attempt 1...
+[13:03:31]   Copilot finished in 108s
+[13:03:41]   PASS (attempt 1)
+[13:03:41]   Running totals: 27/27 (100%) attempt1, 27/27 (100%) attempt2
+[13:03:41] --- [28/33] tree-building ---
+[13:03:41]   Attempt 1...
+[13:06:16]   Copilot finished in 155s
+[13:06:24]   PASS (attempt 1)
+[13:06:24]   Running totals: 28/28 (100%) attempt1, 28/28 (100%) attempt2
+[13:06:24] --- [29/33] two-bucket ---
+[13:06:24]   Attempt 1...
+[13:08:12]   Copilot finished in 107s
+[13:08:20]   PASS (attempt 1)
+[13:08:20]   Running totals: 29/29 (100%) attempt1, 29/29 (100%) attempt2
+[13:08:20] --- [30/33] variable-length-quantity ---
+[13:08:20]   Attempt 1...
+[13:09:27]   Copilot finished in 67s
+[13:09:36]   PASS (attempt 1)
+[13:09:36]   Running totals: 30/30 (100%) attempt1, 30/30 (100%) attempt2
+[13:09:36] --- [31/33] wordy ---
+[13:09:36]   Attempt 1...
+[13:11:52]   Copilot finished in 137s
+[13:12:01]   PASS (attempt 1)
+[13:12:01]   Running totals: 31/31 (100%) attempt1, 31/31 (100%) attempt2
+[13:12:01] --- [32/33] zebra-puzzle ---
+[13:12:01]   Attempt 1...
+[13:13:19]   Copilot finished in 77s
+[13:13:27]   PASS (attempt 1)
+[13:13:27]   Running totals: 32/32 (100%) attempt1, 32/32 (100%) attempt2
+[13:13:27] --- [33/33] zipper ---
+[13:13:27]   Attempt 1...
+[13:15:20]   Copilot finished in 113s
+[13:15:29]   PASS (attempt 1)
+[13:15:29]   Running totals: 33/33 (100%) attempt1, 33/33 (100%) attempt2
+[13:15:29] 
+[13:15:29] === FINAL RESULTS ===
+[13:15:29] Language: python
+[13:15:29] Total exercises: 33
+[13:15:29] Pass rate (attempt 1): 33/33 = 100%
+[13:15:29] Pass rate (attempt 2): 33/33 = 100%
+[13:15:29] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\python

@@ -23,8 +23,28 @@ For example:
 ## Current code in lib.rs:
 ```
 pub fn abbreviate(phrase: &str) -> String {
-    todo!("Given the phrase '{phrase}', return its acronym");
+    let mut acronym = String::new();
+    let mut prev_separator = true;
+    let mut prev_lower = false;
+
+    for c in phrase.chars() {
+        if c.is_alphabetic() {
+            if prev_separator {
+                acronym.extend(c.to_uppercase());
+            } else if c.is_uppercase() && prev_lower {
+                acronym.push(c);
+            }
+            prev_separator = false;
+            prev_lower = c.is_lowercase();
+        } else if c.is_whitespace() || c == '-' {
+            prev_separator = true;
+            prev_lower = false;
+        }
+    }
+
+    acronym
 }
+
 
 
 ```

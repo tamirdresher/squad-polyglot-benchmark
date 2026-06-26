@@ -26,19 +26,35 @@ In fact, when a test attempts to add the same student more than once, your imple
 
 ## Current code in lib.rs:
 ```
-pub struct School {}
+use std::collections::{BTreeMap, BTreeSet};
+
+#[derive(Default)]
+pub struct School {
+    // Grades sorted ascending (BTreeMap), each holding its students sorted
+    // alphabetically and de-duplicated (BTreeSet).
+    grades: BTreeMap<u32, BTreeSet<String>>,
+    // All student names, used to enforce global uniqueness across grades.
+    students: BTreeSet<String>,
+}
 
 impl School {
     pub fn new() -> School {
-        todo!()
+        School::default()
     }
 
     pub fn add(&mut self, grade: u32, student: &str) {
-        todo!("Add {student} to the roster for {grade}")
+        // Only enroll the student if the name is not already present anywhere.
+        // `BTreeSet::insert` returns `false` when the value already existed.
+        if self.students.insert(student.to_string()) {
+            self.grades
+                .entry(grade)
+                .or_default()
+                .insert(student.to_string());
+        }
     }
 
     pub fn grades(&self) -> Vec<u32> {
-        todo!()
+        self.grades.keys().copied().collect()
     }
 
     // If `grade` returned a reference, `School` would be forced to keep a `Vec<String>`
@@ -46,9 +62,13 @@ impl School {
     // the internal structure can be completely arbitrary. The tradeoff is that some data
     // must be copied each time `grade` is called.
     pub fn grade(&self, grade: u32) -> Vec<String> {
-        todo!("Return the list of students in {grade}")
+        self.grades
+            .get(&grade)
+            .map(|students| students.iter().cloned().collect())
+            .unwrap_or_default()
     }
 }
+
 
 
 ```

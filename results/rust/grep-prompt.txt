@@ -41,21 +41,78 @@ use anyhow::Error;
 ///
 /// [`std::env::args`]: https://doc.rust-lang.org/std/env/fn.args.html
 #[derive(Debug)]
-pub struct Flags;
+pub struct Flags {
+    line_numbers: bool,
+    files_only: bool,
+    case_insensitive: bool,
+    invert: bool,
+    entire_line: bool,
+}
 
 impl Flags {
     pub fn new(flags: &[&str]) -> Self {
-        todo!(
-            "Given the flags {flags:?} implement your own 'Flags' struct to handle flags-related logic"
-        );
+        Flags {
+            line_numbers: flags.contains(&"-n"),
+            files_only: flags.contains(&"-l"),
+            case_insensitive: flags.contains(&"-i"),
+            invert: flags.contains(&"-v"),
+            entire_line: flags.contains(&"-x"),
+        }
+    }
+
+    fn line_matches(&self, line: &str, pattern: &str) -> bool {
+        let matched = if self.case_insensitive {
+            let line = line.to_lowercase();
+            let pattern = pattern.to_lowercase();
+            if self.entire_line {
+                line == pattern
+            } else {
+                line.contains(&pattern)
+            }
+        } else if self.entire_line {
+            line == pattern
+        } else {
+            line.contains(pattern)
+        };
+
+        matched ^ self.invert
     }
 }
 
 pub fn grep(pattern: &str, flags: &Flags, files: &[&str]) -> Result<Vec<String>, Error> {
-    todo!(
-        "Search the files '{files:?}' for '{pattern}' pattern and save the matches in a vector. Your search logic should be aware of the given flags '{flags:?}'"
-    );
+    let mut results = Vec::new();
+    let show_file_name = files.len() > 1;
+
+    for &file in files {
+        let content = std::fs::read_to_string(file)?;
+
+        for (index, line) in content.lines().enumerate() {
+            if !flags.line_matches(line, pattern) {
+                continue;
+            }
+
+            if flags.files_only {
+                results.push(file.to_string());
+                break;
+            }
+
+            let mut output = String::new();
+            if show_file_name {
+                output.push_str(file);
+                output.push(':');
+            }
+            if flags.line_numbers {
+                output.push_str(&(index + 1).to_string());
+                output.push(':');
+            }
+            output.push_str(line);
+            results.push(output);
+        }
+    }
+
+    Ok(results)
 }
+
 
 
 ```

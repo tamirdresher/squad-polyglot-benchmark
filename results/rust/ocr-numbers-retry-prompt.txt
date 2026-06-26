@@ -13,44 +13,46 @@ pub enum Error {
     InvalidColumnCount(usize),
 }
 
+const ROWS_PER_NUMBER: usize = 4;
+const COLS_PER_DIGIT: usize = 3;
+
 pub fn convert(input: &str) -> Result<String, Error> {
     let lines: Vec<&str> = input.lines().collect();
-    if !lines.len().is_multiple_of(4) {
+    if !lines.len().is_multiple_of(ROWS_PER_NUMBER) {
         return Err(Error::InvalidRowCount(lines.len()));
     }
 
     lines
-        .chunks(4)
-        .map(convert_line)
-        .collect::<Result<Vec<String>, Error>>()
+        .chunks(ROWS_PER_NUMBER)
+        .map(convert_number)
+        .collect::<Result<Vec<_>, _>>()
         .map(|numbers| numbers.join(","))
 }
 
-fn convert_line(rows: &[&str]) -> Result<String, Error> {
+fn convert_number(rows: &[&str]) -> Result<String, Error> {
     for row in rows {
         let width = row.chars().count();
-        if !width.is_multiple_of(3) {
+        if !width.is_multiple_of(COLS_PER_DIGIT) {
             return Err(Error::InvalidColumnCount(width));
         }
     }
 
-    let width = rows.iter().map(|row| row.chars().count()).max().unwrap_or(0);
-    let digit_count = width / 3;
     let grid: Vec<Vec<char>> = rows.iter().map(|row| row.chars().collect()).collect();
+    let width = grid.iter().map(Vec::len).max().unwrap_or(0);
+    let digit_count = width / COLS_PER_DIGIT;
 
-    let number = (0..digit_count)
+    let digits = (0..digit_count)
         .map(|index| recognize_digit(&grid, index))
         .collect();
-
-    Ok(number)
+    Ok(digits)
 }
 
 fn recognize_digit(grid: &[Vec<char>], index: usize) -> char {
-    let start = index * 3;
     let mut cell = String::with_capacity(9);
     for row in grid.iter().take(3) {
-        for offset in 0..3 {
-            cell.push(*row.get(start + offset).unwrap_or(&' '));
+        for offset in 0..COLS_PER_DIGIT {
+            let column = index * COLS_PER_DIGIT + offset;
+            cell.push(*row.get(column).unwrap_or(&' '));
         }
     }
 

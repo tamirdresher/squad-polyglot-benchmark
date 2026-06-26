@@ -1,353 +1,353 @@
 {
-  "pass_2": 49,
-  "pass_1": 48,
-  "rate_2": 100.0,
-  "rate_1": 98.0,
-  "total": 49,
-  "language": "javascript",
   "exercises": [
     {
-      "time_1": 101.616478,
       "exercise": "affine-cipher",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 140.2359263
     },
     {
-      "time_1": 203.3225356,
       "exercise": "alphametics",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 166.7378077
     },
     {
-      "time_1": 141.5477098,
       "exercise": "beer-song",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 124.1128272
     },
     {
-      "time_1": 78.8683451,
       "exercise": "binary",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 100.0707826
     },
     {
-      "time_1": 168.3429314,
       "exercise": "book-store",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 175.8245145
     },
     {
-      "time_1": 120.3180153,
       "exercise": "bottle-song",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 135.2824188
     },
     {
-      "time_1": 286.334077,
       "exercise": "bowling",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 253.3868649
     },
     {
-      "time_1": 193.5672515,
       "exercise": "complex-numbers",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 130.6537405
     },
     {
-      "time_1": 186.3747451,
       "exercise": "connect",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 183.0123212
     },
     {
-      "time_1": 168.825177,
       "exercise": "food-chain",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 179.6626938
     },
     {
-      "time_1": 322.4193122,
       "exercise": "forth",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 231.5912471
     },
     {
-      "time_1": 176.7006743,
       "exercise": "go-counting",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 255.5407631
     },
     {
-      "time_1": 147.8153473,
       "exercise": "grade-school",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 164.5266986
     },
     {
-      "time_1": 298.8921455,
       "exercise": "grep",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 276.8032414
     },
     {
-      "time_1": 140.07148,
       "exercise": "house",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 184.3714361
     },
     {
-      "time_1": 200.3296568,
       "exercise": "killer-sudoku-helper",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 142.4314793
     },
     {
-      "time_1": 314.3727803,
       "exercise": "ledger",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 276.4727908
     },
     {
-      "time_1": 180.3695421,
       "exercise": "list-ops",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 202.3242198
     },
     {
-      "time_1": 123.7250715,
       "exercise": "meetup",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 128.5981268
     },
     {
-      "time_1": 153.1780027,
       "exercise": "ocr-numbers",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 195.2014889
     },
     {
-      "time_1": 256.074274,
       "exercise": "palindrome-products",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 204.8385757
     },
     {
-      "time_1": 136.805032,
       "exercise": "parallel-letter-frequency",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 183.254397
     },
     {
-      "time_1": 158.1205015,
       "exercise": "phone-number",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 135.7674801
     },
     {
-      "time_1": 125.0137264,
       "exercise": "pig-latin",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 134.1324636
     },
     {
-      "time_1": 188.3826567,
       "exercise": "poker",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 431.6813039
     },
     {
-      "time_1": 155.1140687,
       "exercise": "promises",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 195.2406105
     },
     {
-      "time_1": 149.2660323,
       "exercise": "queen-attack",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 154.7728604
     },
     {
-      "time_1": 15.4470082,
       "exercise": "rational-numbers",
+      "pass_1": true,
       "pass_2": true,
-      "pass_1": false,
-      "time_2": 408.5488254
+      "time_2": 0,
+      "time_1": 264.8271988
     },
     {
-      "time_1": 184.3817762,
       "exercise": "react",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 196.9108471
     },
     {
-      "time_1": 136.8401007,
       "exercise": "rectangles",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 139.8938917
     },
     {
-      "time_1": 208.7090056,
       "exercise": "resistor-color-trio",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 230.9639169
     },
     {
-      "time_1": 194.1052701,
       "exercise": "rest-api",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 264.1647331
     },
     {
-      "time_1": 145.4177622,
       "exercise": "robot-name",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 176.0082949
     },
     {
-      "time_1": 123.3091266,
       "exercise": "say",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 153.9615835
     },
     {
-      "time_1": 174.8952602,
       "exercise": "scale-generator",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 185.1989375
     },
     {
-      "time_1": 174.3285388,
       "exercise": "simple-linked-list",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 151.1443188
     },
     {
-      "time_1": 768.5948716,
       "exercise": "space-age",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 178.398425
     },
     {
-      "time_1": 134.3169446,
       "exercise": "state-of-tic-tac-toe",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 165.9252363
     },
     {
-      "time_1": 103.0009101,
       "exercise": "sum-of-multiples",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 113.2262481
     },
     {
-      "time_1": 171.9707427,
       "exercise": "tournament",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 147.3525044
     },
     {
-      "time_1": 214.2757737,
       "exercise": "transpose",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 297.4039108
     },
     {
-      "time_1": 92.8623793,
       "exercise": "triangle",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 113.9376405
     },
     {
-      "time_1": 148.8498276,
       "exercise": "twelve-days",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 159.9290918
     },
     {
-      "time_1": 151.5510806,
       "exercise": "two-bucket",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 179.0053269
     },
     {
-      "time_1": 156.7145902,
       "exercise": "variable-length-quantity",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 157.4070783
     },
     {
-      "time_1": 153.8170115,
       "exercise": "word-search",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 197.4276579
     },
     {
-      "time_1": 173.0526013,
       "exercise": "wordy",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 236.0306377
     },
     {
-      "time_1": 182.1917825,
       "exercise": "zebra-puzzle",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 176.9912923
     },
     {
-      "time_1": 207.9964396,
       "exercise": "zipper",
-      "pass_2": true,
       "pass_1": true,
-      "time_2": 0
+      "pass_2": true,
+      "time_2": 0,
+      "time_1": 163.9586337
     }
-  ]
+  ],
+  "rate_2": 100.0,
+  "pass_2": 49,
+  "language": "javascript",
+  "total": 49,
+  "pass_1": 49,
+  "rate_1": 100.0
 }

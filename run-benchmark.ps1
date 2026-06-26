@@ -13,10 +13,12 @@ $benchmarkDir = Join-Path $BaseDir "benchmark-$Language"
 $resultsDir = Join-Path $BaseDir "results" $Language
 New-Item -ItemType Directory -Force -Path $resultsDir | Out-Null
 
-# For C++, use subst to avoid Windows path length issues with MSVC
+# For C++, use subst to avoid Windows path length issues with MSVC (build only)
+# Copilot must run from the real path (needs git repo context), subst is only for cmake/build
 if ($Language -eq "cpp") {
     subst B: $BaseDir 2>$null
-    $benchmarkDir = "B:\benchmark-$Language"
+    $cppBuildRoot = "B:\benchmark-$Language"
+    # benchmarkDir stays as the real path for copilot
 }
 
 $timestamp = Get-Date -Format "yyyy-MM-dd-HH-mm-ss"
@@ -107,7 +109,9 @@ function Run-Tests($lang, $exerciseDir) {
                 $vsCmake = "$vsBase\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe"
                 $vcvars = "$vsBase\VC\Auxiliary\Build\vcvars64.bat"
                 Remove-Item -Recurse -Force build -ErrorAction SilentlyContinue
-                $cwd = (Get-Location).Path
+                # Use B: subst path for build (avoids MAX_PATH issues) but exercise name from real path
+                $exName = Split-Path (Get-Location).Path -Leaf
+                $cwd = "B:\benchmark-cpp\$exName"
                 $output = & $env:ComSpec /c "call `"$vcvars`" >nul 2>&1 && cd /d `"$cwd`" && `"$vsCmake`" -G Ninja -B build . >nul 2>&1 && `"$vsCmake`" --build build 2>&1 && cd build && ctest --output-on-failure 2>&1" | Out-String
             }
         }

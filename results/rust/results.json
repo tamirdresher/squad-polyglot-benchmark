@@ -1,161 +1,220 @@
 {
-  "note": "Split across 2 runs due to runner crash after exercise 16. Re-run confirmed 14/14. Combined: 30/30.",
-  "pass_1": 30,
+  "language": "rust",
   "total": 30,
-  "rate_1": "100.0",
+  "pass_1": 30,
   "pass_2": 30,
+  "rate_1": 100.0,
+  "rate_2": 100.0,
   "exercises": [
     {
-      "name": "accumulate",
+      "exercise": "accumulate",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 81.0,
+      "time_2": 0
     },
     {
-      "name": "acronym",
+      "exercise": "acronym",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 66.0,
+      "time_2": 0
     },
     {
-      "name": "alphametics",
+      "exercise": "alphametics",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 72.0,
+      "time_2": 0
     },
     {
-      "name": "book-store",
+      "exercise": "book-store",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 46.0,
+      "time_2": 0
     },
     {
-      "name": "bowling",
+      "exercise": "bowling",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 60.0,
+      "time_2": 0
     },
     {
-      "name": "decimal",
+      "exercise": "decimal",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 66.0,
+      "time_2": 0
     },
     {
-      "name": "dot-dsl",
+      "exercise": "dot-dsl",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 52.0,
+      "time_2": 0
     },
     {
-      "name": "doubly-linked-list",
+      "exercise": "doubly-linked-list",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 117.0,
+      "time_2": 0
     },
     {
-      "name": "fizzy",
+      "exercise": "fizzy",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 75.0,
+      "time_2": 0
     },
     {
-      "name": "forth",
+      "exercise": "forth",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 92.0,
+      "time_2": 0
     },
     {
-      "name": "gigasecond",
+      "exercise": "gigasecond",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 44.0,
+      "time_2": 0
     },
     {
-      "name": "grade-school",
+      "exercise": "grade-school",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 61.0,
+      "time_2": 0
     },
     {
-      "name": "grep",
+      "exercise": "grep",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 67.0,
+      "time_2": 0
     },
     {
-      "name": "luhn-from",
+      "exercise": "luhn-from",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 59.0,
+      "time_2": 0
     },
     {
-      "name": "macros",
+      "exercise": "macros",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 95.0,
+      "time_2": 0
     },
     {
-      "name": "nucleotide-codons",
+      "exercise": "nucleotide-codons",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 74.0,
+      "time_2": 0
     },
     {
-      "name": "ocr-numbers",
+      "exercise": "ocr-numbers",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 196.4288798,
+      "time_2": 0
     },
     {
-      "name": "parallel-letter-frequency",
+      "exercise": "parallel-letter-frequency",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 119.1635229,
+      "time_2": 0
     },
     {
-      "name": "pig-latin",
+      "exercise": "pig-latin",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 114.6020502,
+      "time_2": 0
     },
     {
-      "name": "poker",
+      "exercise": "poker",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 183.7552626,
+      "time_2": 0
     },
     {
-      "name": "react",
+      "exercise": "react",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 281.6359558,
+      "time_2": 0
     },
     {
-      "name": "robot-name",
+      "exercise": "robot-name",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 122.5951594,
+      "time_2": 0
     },
     {
-      "name": "say",
+      "exercise": "say",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 203.3305466,
+      "time_2": 0
     },
     {
-      "name": "scale-generator",
+      "exercise": "scale-generator",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 129.948324,
+      "time_2": 0
     },
     {
-      "name": "simple-cipher",
+      "exercise": "simple-cipher",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 111.8009378,
+      "time_2": 0
     },
     {
-      "name": "two-bucket",
+      "exercise": "two-bucket",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 102.8373422,
+      "time_2": 0
     },
     {
-      "name": "variable-length-quantity",
+      "exercise": "variable-length-quantity",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 63.2131325,
+      "time_2": 0
     },
     {
-      "name": "word-count",
+      "exercise": "word-count",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 55.3115659,
+      "time_2": 0
     },
     {
-      "name": "wordy",
+      "exercise": "wordy",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 124.2693566,
+      "time_2": 0
     },
     {
-      "name": "xorcism",
+      "exercise": "xorcism",
       "pass_1": true,
-      "pass_2": true
+      "pass_2": true,
+      "time_1": 361.8902067,
+      "time_2": 0
     }
-  ],
-  "rate_2": "100.0",
-  "language": "rust"
+  ]
 }

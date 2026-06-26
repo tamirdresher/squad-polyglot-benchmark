@@ -34,11 +34,125 @@ Each letter must represent a different digit, and the leading digit of a multi-d
 
 ## Current code in lib.rs:
 ```
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 pub fn solve(input: &str) -> Option<HashMap<char, u8>> {
-    todo!("Solve the alphametic {input:?}")
+    let (lhs, rhs) = input.split_once("==")?;
+
+    // Build a single linear equation: sum(coeff[letter] * digit[letter]) == 0.
+    // Addends contribute positive place values, the result contributes negative.
+    let mut coeffs: HashMap<char, i64> = HashMap::new();
+    let mut leading: HashSet<char> = HashSet::new();
+
+    for word in lhs.split('+') {
+        accumulate(word, 1, &mut coeffs, &mut leading);
+    }
+    accumulate(rhs, -1, &mut coeffs, &mut leading);
+
+    let mut letters: Vec<(char, i64)> = coeffs.into_iter().collect();
+
+    // Only ten digits exist, so more than ten distinct letters is unsolvable.
+    if letters.is_empty() || letters.len() > 10 {
+        return None;
+    }
+
+    // Assign the largest-magnitude coefficients first so pruning bites early.
+    letters.sort_by_key(|&(_, c)| std::cmp::Reverse(c.abs()));
+
+    let chars: Vec<char> = letters.iter().map(|&(ch, _)| ch).collect();
+    let coef: Vec<i64> = letters.iter().map(|&(_, c)| c).collect();
+    let is_leading: Vec<bool> = chars.iter().map(|ch| leading.contains(ch)).collect();
+    let n = letters.len();
+
+    // Loose bounds on the contribution of the still-unassigned suffix (digits 0..=9).
+    let mut suffix_min = vec![0i64; n + 1];
+    let mut suffix_max = vec![0i64; n + 1];
+    for i in (0..n).rev() {
+        suffix_min[i] = suffix_min[i + 1] + if coef[i] < 0 { coef[i] * 9 } else { 0 };
+        suffix_max[i] = suffix_max[i + 1] + if coef[i] > 0 { coef[i] * 9 } else { 0 };
+    }
+
+    let mut used = [false; 10];
+    let mut assignment = vec![0u8; n];
+
+    if backtrack(
+        0,
+        0,
+        &coef,
+        &is_leading,
+        &suffix_min,
+        &suffix_max,
+        &mut used,
+        &mut assignment,
+    ) {
+        Some(
+            chars
+                .into_iter()
+                .zip(assignment)
+                .collect::<HashMap<char, u8>>(),
+        )
+    } else {
+        None
+    }
 }
+
+fn accumulate(word: &str, sign: i64, coeffs: &mut HashMap<char, i64>, leading: &mut HashSet<char>) {
+    let chars: Vec<char> = word.trim().chars().collect();
+    if chars.is_empty() {
+        return;
+    }
+    if chars.len() > 1 {
+        leading.insert(chars[0]);
+    }
+    let n = chars.len();
+    for (i, &ch) in chars.iter().enumerate() {
+        let place = 10i64.pow((n - 1 - i) as u32);
+        *coeffs.entry(ch).or_insert(0) += sign * place;
+    }
+}
+
+#[allow(clippy::too_many_arguments)]
+fn backtrack(
+    idx: usize,
+    partial: i64,
+    coef: &[i64],
+    is_leading: &[bool],
+    suffix_min: &[i64],
+    suffix_max: &[i64],
+    used: &mut [bool; 10],
+    assignment: &mut [u8],
+) -> bool {
+    if idx == coef.len() {
+        return partial == 0;
+    }
+    // If the remaining letters cannot possibly drive the sum to zero, give up.
+    if partial + suffix_max[idx] < 0 || partial + suffix_min[idx] > 0 {
+        return false;
+    }
+    let start = if is_leading[idx] { 1 } else { 0 };
+    for d in start..=9u8 {
+        if used[d as usize] {
+            continue;
+        }
+        used[d as usize] = true;
+        assignment[idx] = d;
+        if backtrack(
+            idx + 1,
+            partial + coef[idx] * d as i64,
+            coef,
+            is_leading,
+            suffix_min,
+            suffix_max,
+            used,
+            assignment,
+        ) {
+            return true;
+        }
+        used[d as usize] = false;
+    }
+    false
+}
+
 
 
 ```

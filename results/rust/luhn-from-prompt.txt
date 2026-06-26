@@ -16,24 +16,51 @@ In this exercise you'll implement the [From trait](https://doc.rust-lang.org/std
 
 ## Current code in lib.rs:
 ```
-pub struct Luhn;
+pub struct Luhn {
+    code: String,
+}
 
 impl Luhn {
     pub fn is_valid(&self) -> bool {
-        todo!("Determine if the current Luhn struct contains a valid credit card number.");
+        let mut sum = 0;
+        let mut digit_count = 0;
+
+        for c in self.code.chars().rev() {
+            if c.is_whitespace() {
+                continue;
+            }
+
+            match c.to_digit(10) {
+                Some(mut digit) => {
+                    if digit_count % 2 == 1 {
+                        digit *= 2;
+                        if digit > 9 {
+                            digit -= 9;
+                        }
+                    }
+                    sum += digit;
+                    digit_count += 1;
+                }
+                None => return false,
+            }
+        }
+
+        digit_count > 1 && sum % 10 == 0
     }
 }
 
-/// Here is the example of how the From trait could be implemented
-/// for the &str type. Naturally, you can implement this trait
-/// by hand for every other type presented in the test suite,
-/// but your solution will fail if a new type is presented.
-/// Perhaps there exists a better solution for this problem?
-impl From<&str> for Luhn {
-    fn from(input: &str) -> Self {
-        todo!("From the given input '{input}' create a new Luhn struct.");
+/// A single generic implementation covers every type the test suite throws at
+/// us — `&str`, `String`, and all the unsigned integer types — because each of
+/// them implements `ToString`. Any new type that implements `ToString` will
+/// work without further changes.
+impl<T: ToString> From<T> for Luhn {
+    fn from(input: T) -> Self {
+        Luhn {
+            code: input.to_string(),
+        }
     }
 }
+
 
 
 ```

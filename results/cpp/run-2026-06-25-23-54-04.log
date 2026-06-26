@@ -1,0 +1,21 @@
+[23:54:04] === Squad Polyglot Benchmark - cpp ===
+[23:54:04] Benchmark dir: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\benchmark-cpp
+[23:54:04] Agent mode: copilot --yolo --agent squad
+[23:54:04] Exercises to run: 2
+[23:54:04] --- [1/2] all-your-base ---
+[23:54:04]   Attempt 1...
+[23:57:13]   Copilot finished in 189s
+[23:57:28]   PASS (attempt 1)
+[23:57:28]   Running totals: 1/1 (100%) attempt1, 1/1 (100%) attempt2
+[23:57:28] --- [2/2] allergies ---
+[23:57:28]   Attempt 1...
+[00:02:47]   Copilot finished in 319s
+[00:03:02]   PASS (attempt 1)
+[00:03:02]   Running totals: 2/2 (100%) attempt1, 2/2 (100%) attempt2
+[00:03:02] 
+[00:03:02] === FINAL RESULTS ===
+[00:03:02] Language: cpp
+[00:03:02] Total exercises: 2
+[00:03:02] Pass rate (attempt 1): 2/2 = 100%
+[00:03:02] Pass rate (attempt 2): 2/2 = 100%
+[00:03:02] Results saved to: C:\Users\tamirdresher\.copilot\repos\copilot-worktrees\tamresearch1\tamirdresher-microsoft-symmetrical-guacamole\squad-polyglot-benchmark\results\cpp

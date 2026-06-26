@@ -75,15 +75,87 @@ raw pointers. See the docs for [`Send`](https://doc.rust-lang.org/std/marker/tra
 // You are free to use anything in it, but it's mainly for the test framework.
 mod pre_implemented;
 
-pub struct LinkedList<T>(std::marker::PhantomData<T>);
+use std::marker::PhantomData;
+use std::ptr::NonNull;
 
-pub struct Cursor<'a, T>(std::marker::PhantomData<&'a mut T>);
+// A doubly linked list implemented with `unsafe` Rust.
+//
+// # Safety invariants
+//
+// The list is a chain of heap-allocated `Node`s connected by raw pointers
+// wrapped in `NonNull`. Every `unsafe` block below relies on the following
+// invariants, which are upheld by all (safe and unsafe) operations:
+//
+// 1. Validity: Every `NonNull<Node<T>>` reachable from the list (`front`,
+//    `back`, a node's `next`/`prev`, or a cursor's `current`) points to a node
+//    that was allocated through `Box` and has not yet been freed. Such pointers
+//    are therefore always safe to dereference.
+// 2. Link consistency: `front` is the unique node with `prev == None` and
+//    `back` is the unique node with `next == None`. For every adjacent pair
+//    `(a, b)`, `a.next == Some(b)` iff `b.prev == Some(a)`.
+// 3. Length: `len` equals the number of nodes reachable from `front` by
+//    following `next`.
+// 4. Unique ownership: Each node is owned by exactly one list, so a `Box`
+//    is reconstructed from a node pointer (to move out of it or free it) at
+//    most once.
+// 5. Aliasing: Nodes are only ever reached through `&LinkedList` (shared,
+//    read-only access to elements) or `&mut LinkedList` (exclusive access), so
+//    Rust's aliasing rules are respected even though raw pointers are used.
 
-pub struct Iter<'a, T>(std::marker::PhantomData<&'a T>);
+/// An owned node living on the heap. The `next`/`prev` pointers participate in
+/// the list invariants documented at the module level.
+struct Node<T> {
+    element: T,
+    next: Option<NonNull<Node<T>>>,
+    prev: Option<NonNull<Node<T>>>,
+}
+
+impl<T> Node<T> {
+    /// Allocate a fresh, detached node on the heap and hand back a non-null
+    /// pointer to it. Ownership of the allocation transfers to the caller, who
+    /// must eventually free it by reconstructing the `Box`.
+    fn new(element: T) -> NonNull<Node<T>> {
+        let boxed = Box::new(Node {
+            element,
+            next: None,
+            prev: None,
+        });
+        // `Box::leak` yields a valid, non-null `&mut`, so `NonNull::from`
+        // cannot fail. The allocation is now owned via the raw pointer.
+        NonNull::from(Box::leak(boxed))
+    }
+}
+
+pub struct LinkedList<T> {
+    front: Option<NonNull<Node<T>>>,
+    back: Option<NonNull<Node<T>>>,
+    len: usize,
+    // Marks that the list owns `T` values (through boxed nodes). This gives the
+    // list the correct drop-check behaviour and makes `LinkedList<T>` covariant
+    // over `T` (both `NonNull<_>` and `Box<_>` are covariant).
+    _marker: PhantomData<Box<Node<T>>>,
+}
+
+pub struct Cursor<'a, T> {
+    list: &'a mut LinkedList<T>,
+    current: Option<NonNull<Node<T>>>,
+}
+
+pub struct Iter<'a, T> {
+    next: Option<NonNull<Node<T>>>,
+    // Covariant over `'a` and `T`; ties the iterator's lifetime to the list it
+    // borrows immutably.
+    _marker: PhantomData<&'a T>,
+}
 
 impl<T> LinkedList<T> {
     pub fn new() -> Self {
-        todo!()
+        LinkedList {
+            front: None,
+            back: None,
+            len: 0,
+            _marker: PhantomData,
+        }
     }
 
     // You may be wondering why it's necessary to have is_empty()
@@ -92,26 +164,42 @@ impl<T> LinkedList<T> {
     // whereas is_empty() is almost always cheap.
     // (Also ask yourself whether len() is expensive for LinkedList)
     pub fn is_empty(&self) -> bool {
-        todo!()
+        self.len == 0
     }
 
     pub fn len(&self) -> usize {
-        todo!()
+        self.len
     }
 
     /// Return a cursor positioned on the front element
     pub fn cursor_front(&mut self) -> Cursor<'_, T> {
-        todo!()
+        // `self.front` is `Copy`, so it is read before `self` is moved in.
+        Cursor {
+            current: self.front,
+            list: self,
+        }
     }
 
     /// Return a cursor positioned on the back element
     pub fn cursor_back(&mut self) -> Cursor<'_, T> {
-        todo!()
+        Cursor {
+            current: self.back,
+            list: self,
+        }
     }
 
     /// Return an iterator that moves from front to back
     pub fn iter(&self) -> Iter<'_, T> {
-        todo!()
+        Iter {
+            next: self.front,
+            _marker: PhantomData,
+        }
+    }
+}
+
+impl<T> Default for LinkedList<T> {
+    fn default() -> Self {
+        Self::new()
     }
 }
 
@@ -120,35 +208,134 @@ impl<T> LinkedList<T> {
 impl<T> Cursor<'_, T> {
     /// Take a mutable reference to the current element
     pub fn peek_mut(&mut self) -> Option<&mut T> {
-        todo!()
+        self.current.map(|node| {
+            // SAFETY: by invariant (1) `node` points to a live node. We hold
+            // `&mut self`, hence exclusive access to the list, so the produced
+            // `&mut` does not alias any other reference. Its lifetime is tied to
+            // `&mut self` by the signature.
+            unsafe { &mut (*node.as_ptr()).element }
+        })
     }
 
     /// Move one position forward (towards the back) and
     /// return a reference to the new position
     #[allow(clippy::should_implement_trait)]
     pub fn next(&mut self) -> Option<&mut T> {
-        todo!()
+        let current = self.current?;
+        // SAFETY: `current` points to a live node (invariant 1); reading its
+        // `next` pointer only copies an `Option<NonNull<_>>`.
+        let next = unsafe { (*current.as_ptr()).next };
+        next.map(|next| {
+            self.current = Some(next);
+            // SAFETY: `next` points to a live node (invariant 1) and we have
+            // exclusive access through `&mut self`.
+            unsafe { &mut (*next.as_ptr()).element }
+        })
     }
 
     /// Move one position backward (towards the front) and
     /// return a reference to the new position
     pub fn prev(&mut self) -> Option<&mut T> {
-        todo!()
+        let current = self.current?;
+        // SAFETY: `current` points to a live node (invariant 1).
+        let prev = unsafe { (*current.as_ptr()).prev };
+        prev.map(|prev| {
+            self.current = Some(prev);
+            // SAFETY: `prev` points to a live node (invariant 1) with exclusive
+            // access through `&mut self`.
+            unsafe { &mut (*prev.as_ptr()).element }
+        })
     }
 
     /// Remove and return the element at the current position and move the cursor
     /// to the neighboring element that's closest to the back. This can be
     /// either the next or previous position.
     pub fn take(&mut self) -> Option<T> {
-        todo!()
+        let current = self.current?;
+        // SAFETY: `current` points to a live node uniquely owned by this list
+        // (invariants 1 and 4). Reconstructing the `Box` reclaims ownership of
+        // the allocation; moving the `Node` out of it frees the heap memory at
+        // the end of this scope and yields the element by value.
+        let node = unsafe { Box::from_raw(current.as_ptr()) };
+        let Node {
+            element,
+            prev,
+            next,
+        } = *node;
+
+        // Re-link the neighbours so invariants (2) and (3) hold afterwards.
+        match prev {
+            // SAFETY: `p` points to a live node (invariant 1).
+            Some(p) => unsafe { (*p.as_ptr()).next = next },
+            None => self.list.front = next,
+        }
+        match next {
+            // SAFETY: `n` points to a live node (invariant 1).
+            Some(n) => unsafe { (*n.as_ptr()).prev = prev },
+            None => self.list.back = prev,
+        }
+
+        self.list.len -= 1;
+        // The neighbour closest to the back is `next`; fall back to `prev`, or
+        // `None` when the list is now empty.
+        self.current = next.or(prev);
+        Some(element)
     }
 
-    pub fn insert_after(&mut self, _element: T) {
-        todo!()
+    pub fn insert_after(&mut self, element: T) {
+        let new = Node::new(element);
+        match self.current {
+            // Empty list: the new node becomes the sole element.
+            None => {
+                self.list.front = Some(new);
+                self.list.back = Some(new);
+            }
+            Some(current) => {
+                // SAFETY: `current` is a live node (invariant 1) and `new` is a
+                // fresh allocation. We splice `new` between `current` and
+                // `current.next`, preserving invariant (2).
+                let next = unsafe { (*current.as_ptr()).next };
+                unsafe {
+                    (*new.as_ptr()).prev = Some(current);
+                    (*new.as_ptr()).next = next;
+                    (*current.as_ptr()).next = Some(new);
+                }
+                match next {
+                    // SAFETY: `n` points to a live node (invariant 1).
+                    Some(n) => unsafe { (*n.as_ptr()).prev = Some(new) },
+                    None => self.list.back = Some(new),
+                }
+            }
+        }
+        self.list.len += 1;
     }
 
-    pub fn insert_before(&mut self, _element: T) {
-        todo!()
+    pub fn insert_before(&mut self, element: T) {
+        let new = Node::new(element);
+        match self.current {
+            // Empty list: the new node becomes the sole element.
+            None => {
+                self.list.front = Some(new);
+                self.list.back = Some(new);
+            }
+            Some(current) => {
+                // SAFETY: `current` is a live node (invariant 1) and `new` is a
+                // fresh allocation. We splice `new` between `current.prev` and
+                // `current`, preserving invariant (2).
+                let prev = unsafe { (*current.as_ptr()).prev };
+                unsafe {
+                    (*new.as_ptr()).next = Some(current);
+                    (*new.as_ptr()).prev = prev;
+                    (*current.as_ptr()).prev = Some(new);
+                }
+                match prev {
+                    // SAFETY: `p` points to a live node (invariant 1).
+                    Some(p) => unsafe { (*p.as_ptr()).next = Some(new) },
+                    None => self.list.front = Some(new),
+                }
+            }
+        }
+        self.list.len += 1;
     }
 }
 
@@ -156,9 +343,42 @@ impl<'a, T> Iterator for Iter<'a, T> {
     type Item = &'a T;
 
     fn next(&mut self) -> Option<&'a T> {
-        todo!()
+        self.next.map(|node| {
+            // SAFETY: `node` points to a live node (invariant 1). The list is
+            // borrowed immutably for `'a`, so the node stays alive for `'a` and
+            // the returned shared reference is valid for `'a`.
+            let node = unsafe { &*node.as_ptr() };
+            self.next = node.next;
+            &node.element
+        })
     }
 }
+
+impl<T> Drop for LinkedList<T> {
+    fn drop(&mut self) {
+        let mut current = self.front;
+        while let Some(node) = current {
+            // SAFETY: `node` points to a live node uniquely owned by this list
+            // (invariants 1 and 4). Reconstructing the `Box` drops the element
+            // and frees the allocation exactly once. We read `next` (a copy)
+            // before the box is dropped, then advance to it.
+            let boxed = unsafe { Box::from_raw(node.as_ptr()) };
+            current = boxed.next;
+        }
+    }
+}
+
+// SAFETY: a `LinkedList<T>` uniquely owns its `T` values inside heap nodes, just
+// like `Box<T>` or `std::collections::LinkedList<T>`. Sending the list to
+// another thread sends those owned `T` values, which is sound exactly when
+// `T: Send`. A manual impl is required because the raw pointers inside the nodes
+// suppress the auto-derived one.
+unsafe impl<T: Send> Send for LinkedList<T> {}
+
+// SAFETY: `&LinkedList<T>` only ever exposes `&T` (through `Iter`), so sharing a
+// list between threads only shares shared references to `T`. That is sound
+// exactly when `T: Sync`, matching `std::collections::LinkedList<T>`.
+unsafe impl<T: Sync> Sync for LinkedList<T> {}
 
 
 ```

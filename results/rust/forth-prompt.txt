@@ -28,10 +28,16 @@ Words are case-insensitive.
 
 ## Current code in lib.rs:
 ```
+use std::collections::HashMap;
+
 pub type Value = i32;
 pub type Result = std::result::Result<(), Error>;
 
-pub struct Forth;
+pub struct Forth {
+    stack: Vec<Value>,
+    definitions: Vec<Vec<Term>>,
+    dictionary: HashMap<String, Term>,
+}
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum Error {
@@ -41,19 +47,185 @@ pub enum Error {
     InvalidWord,
 }
 
+#[derive(Clone, Copy)]
+enum Builtin {
+    Add,
+    Sub,
+    Mul,
+    Div,
+    Dup,
+    Drop,
+    Swap,
+    Over,
+}
+
+#[derive(Clone, Copy)]
+enum Term {
+    Push(Value),
+    Builtin(Builtin),
+    Call(usize),
+}
+
 impl Forth {
     pub fn new() -> Forth {
-        todo!()
+        let mut dictionary = HashMap::new();
+        dictionary.insert("+".to_string(), Term::Builtin(Builtin::Add));
+        dictionary.insert("-".to_string(), Term::Builtin(Builtin::Sub));
+        dictionary.insert("*".to_string(), Term::Builtin(Builtin::Mul));
+        dictionary.insert("/".to_string(), Term::Builtin(Builtin::Div));
+        dictionary.insert("dup".to_string(), Term::Builtin(Builtin::Dup));
+        dictionary.insert("drop".to_string(), Term::Builtin(Builtin::Drop));
+        dictionary.insert("swap".to_string(), Term::Builtin(Builtin::Swap));
+        dictionary.insert("over".to_string(), Term::Builtin(Builtin::Over));
+        Forth {
+            stack: Vec::new(),
+            definitions: Vec::new(),
+            dictionary,
+        }
     }
 
     pub fn stack(&self) -> &[Value] {
-        todo!()
+        &self.stack
     }
 
     pub fn eval(&mut self, input: &str) -> Result {
-        todo!("result of evaluating '{input}'")
+        let tokens: Vec<&str> = input.split_whitespace().collect();
+        let mut i = 0;
+        while i < tokens.len() {
+            if tokens[i] == ":" {
+                i = self.define(&tokens, i)?;
+            } else {
+                let term = self.resolve(tokens[i])?;
+                Self::run_term(&mut self.stack, &self.definitions, term)?;
+                i += 1;
+            }
+        }
+        Ok(())
+    }
+
+    /// Parse a `: name body ;` definition starting at `tokens[start]` (the colon).
+    /// Returns the index just past the closing `;`.
+    fn define(&mut self, tokens: &[&str], start: usize) -> std::result::Result<usize, Error> {
+        let mut i = start + 1;
+        if i >= tokens.len() {
+            return Err(Error::InvalidWord);
+        }
+        let name = tokens[i].to_lowercase();
+        if as_number(&name).is_some() {
+            return Err(Error::InvalidWord);
+        }
+        i += 1;
+
+        let mut body = Vec::new();
+        let mut closed = false;
+        while i < tokens.len() {
+            if tokens[i] == ";" {
+                closed = true;
+                break;
+            }
+            body.push(self.resolve(tokens[i])?);
+            i += 1;
+        }
+        if !closed {
+            return Err(Error::InvalidWord);
+        }
+
+        let id = self.definitions.len();
+        self.definitions.push(body);
+        self.dictionary.insert(name, Term::Call(id));
+        Ok(i + 1)
+    }
+
+    /// Resolve a token to a concrete `Term`, capturing its current meaning.
+    fn resolve(&self, token: &str) -> std::result::Result<Term, Error> {
+        if let Some(n) = as_number(token) {
+            Ok(Term::Push(n))
+        } else {
+            self.dictionary
+                .get(&token.to_lowercase())
+                .copied()
+                .ok_or(Error::UnknownWord)
+        }
+    }
+
+    fn run_term(stack: &mut Vec<Value>, defs: &[Vec<Term>], term: Term) -> Result {
+        match term {
+            Term::Push(n) => {
+                stack.push(n);
+                Ok(())
+            }
+            Term::Builtin(op) => Self::run_builtin(stack, op),
+            Term::Call(id) => {
+                for &t in &defs[id] {
+                    Self::run_term(stack, defs, t)?;
+                }
+                Ok(())
+            }
+        }
+    }
+
+    fn run_builtin(stack: &mut Vec<Value>, op: Builtin) -> Result {
+        match op {
+            Builtin::Add => {
+                let (a, b) = pop2(stack)?;
+                stack.push(a.wrapping_add(b));
+            }
+            Builtin::Sub => {
+                let (a, b) = pop2(stack)?;
+                stack.push(a.wrapping_sub(b));
+            }
+            Builtin::Mul => {
+                let (a, b) = pop2(stack)?;
+                stack.push(a.wrapping_mul(b));
+            }
+            Builtin::Div => {
+                let (a, b) = pop2(stack)?;
+                if b == 0 {
+                    return Err(Error::DivisionByZero);
+                }
+                stack.push(a.wrapping_div(b));
+            }
+            Builtin::Dup => {
+                let a = *stack.last().ok_or(Error::StackUnderflow)?;
+                stack.push(a);
+            }
+            Builtin::Drop => {
+                stack.pop().ok_or(Error::StackUnderflow)?;
+            }
+            Builtin::Swap => {
+                let (a, b) = pop2(stack)?;
+                stack.push(b);
+                stack.push(a);
+            }
+            Builtin::Over => {
+                let len = stack.len();
+                if len < 2 {
+                    return Err(Error::StackUnderflow);
+                }
+                let v = stack[len - 2];
+                stack.push(v);
+            }
+        }
+        Ok(())
     }
 }
+
+/// A number is an optional leading `-` followed by one or more ASCII digits.
+fn as_number(token: &str) -> Option<Value> {
+    let digits = token.strip_prefix('-').unwrap_or(token);
+    if !digits.is_empty() && digits.bytes().all(|b| b.is_ascii_digit()) {
+        token.parse::<Value>().ok()
+    } else {
+        None
+    }
+}
+
+fn pop2(stack: &mut Vec<Value>) -> std::result::Result<(Value, Value), Error> {
+    let b = stack.pop().ok_or(Error::StackUnderflow)?;
+    let a = stack.pop().ok_or(Error::StackUnderflow)?;
+    Ok((a, b))
+}
+
 
 
 ```

@@ -1,192 +1,192 @@
 {
+  "language": "cpp",
   "total": 26,
   "pass_1": 24,
-  "language": "cpp",
-  "rate_1": 92.3,
   "pass_2": 24,
+  "rate_1": 92.3,
   "rate_2": 92.3,
   "exercises": [
     {
+      "exercise": "all-your-base",
       "pass_1": true,
-      "time_1": 273.8096516,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "all-your-base"
+      "time_1": 204.0,
+      "time_2": 0
     },
     {
+      "exercise": "allergies",
       "pass_1": true,
-      "time_1": 203.0341174,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "allergies"
+      "time_1": 334.0,
+      "time_2": 0
     },
     {
+      "exercise": "bank-account",
       "pass_1": true,
-      "time_1": 401.7059564,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "bank-account"
+      "time_1": 353.7449145,
+      "time_2": 0
     },
     {
+      "exercise": "binary-search-tree",
       "pass_1": true,
-      "time_1": 498.7171183,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "binary-search-tree"
+      "time_1": 464.4905561,
+      "time_2": 0
     },
     {
+      "exercise": "circular-buffer",
       "pass_1": true,
-      "time_1": 445.3643373,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "circular-buffer"
+      "time_1": 498.9498797,
+      "time_2": 0
     },
     {
+      "exercise": "clock",
       "pass_1": true,
-      "time_1": 347.497465,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "clock"
+      "time_1": 497.0573943,
+      "time_2": 0
     },
     {
+      "exercise": "complex-numbers",
       "pass_1": true,
-      "time_1": 339.607836,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "complex-numbers"
+      "time_1": 361.854646,
+      "time_2": 0
     },
     {
+      "exercise": "crypto-square",
       "pass_1": true,
-      "time_1": 394.343281,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "crypto-square"
+      "time_1": 1002.0217911,
+      "time_2": 0
     },
     {
+      "exercise": "diamond",
       "pass_1": true,
-      "time_1": 275.6904579,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "diamond"
+      "time_1": 292.9014451,
+      "time_2": 0
     },
     {
+      "exercise": "dnd-character",
       "pass_1": true,
-      "time_1": 312.0688809,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "dnd-character"
+      "time_1": 223.6671923,
+      "time_2": 0
     },
     {
+      "exercise": "gigasecond",
       "pass_1": false,
-      "time_1": 646.8221483,
-      "time_2": 611.1911851,
       "pass_2": false,
-      "exercise": "gigasecond"
+      "time_1": 476.2279602,
+      "time_2": 775.451525
     },
     {
+      "exercise": "grade-school",
       "pass_1": true,
-      "time_1": 325.8073352,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "grade-school"
+      "time_1": 675.2688456,
+      "time_2": 0
     },
     {
+      "exercise": "kindergarten-garden",
       "pass_1": true,
-      "time_1": 223.1787279,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "kindergarten-garden"
+      "time_1": 240.5146488,
+      "time_2": 0
     },
     {
+      "exercise": "knapsack",
       "pass_1": true,
-      "time_1": 269.0209266,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "knapsack"
+      "time_1": 241.6917203,
+      "time_2": 0
     },
     {
+      "exercise": "linked-list",
       "pass_1": true,
-      "time_1": 261.5916042,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "linked-list"
+      "time_1": 470.4265607,
+      "time_2": 0
     },
     {
+      "exercise": "meetup",
       "pass_1": false,
-      "time_1": 1316.7595323,
-      "time_2": 1995.4767526,
       "pass_2": false,
-      "exercise": "meetup"
+      "time_1": 1287.2760169,
+      "time_2": 866.2966286
     },
     {
+      "exercise": "parallel-letter-frequency",
       "pass_1": true,
-      "time_1": 315.8983007,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "parallel-letter-frequency"
+      "time_1": 362.8327321,
+      "time_2": 0
     },
     {
+      "exercise": "perfect-numbers",
       "pass_1": true,
-      "time_1": 280.1922493,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "perfect-numbers"
+      "time_1": 179.4888816,
+      "time_2": 0
     },
     {
+      "exercise": "phone-number",
       "pass_1": true,
-      "time_1": 349.6378817,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "phone-number"
+      "time_1": 605.1878973,
+      "time_2": 0
     },
     {
+      "exercise": "queen-attack",
       "pass_1": true,
-      "time_1": 259.297719,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "queen-attack"
+      "time_1": 400.7106032,
+      "time_2": 0
     },
     {
+      "exercise": "robot-name",
       "pass_1": true,
-      "time_1": 1267.9743361,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "robot-name"
+      "time_1": 337.335645,
+      "time_2": 0
     },
     {
+      "exercise": "space-age",
       "pass_1": true,
-      "time_1": 230.3412533,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "space-age"
+      "time_1": 290.9198592,
+      "time_2": 0
     },
     {
+      "exercise": "spiral-matrix",
       "pass_1": true,
-      "time_1": 501.1372085,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "spiral-matrix"
+      "time_1": 260.9302065,
+      "time_2": 0
     },
     {
+      "exercise": "sublist",
       "pass_1": true,
-      "time_1": 240.5439088,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "sublist"
+      "time_1": 223.5358724,
+      "time_2": 0
     },
     {
+      "exercise": "yacht",
       "pass_1": true,
-      "time_1": 253.3769222,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "yacht"
+      "time_1": 349.630314,
+      "time_2": 0
     },
     {
+      "exercise": "zebra-puzzle",
       "pass_1": true,
-      "time_1": 387.4300496,
-      "time_2": 0,
       "pass_2": true,
-      "exercise": "zebra-puzzle"
+      "time_1": 420.4827941,
+      "time_2": 0
     }
   ]
 }

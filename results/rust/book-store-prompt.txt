@@ -66,9 +66,38 @@ And $51.20 is the price with the biggest discount.
 
 ## Current code in lib.rs:
 ```
+use std::collections::HashMap;
+
+/// Price in cents for a group of `n` distinct books ($8 each, discounted).
+const GROUP_PRICE: [u32; 6] = [0, 800, 1520, 2160, 2560, 3000];
+
 pub fn lowest_price(books: &[u32]) -> u32 {
-    todo!("Find the lowest price of the bookbasket with books {books:?}")
+    let mut counts: HashMap<u32, u32> = HashMap::new();
+    for &book in books {
+        *counts.entry(book).or_insert(0) += 1;
+    }
+
+    // group_sizes[n] = number of groups made of n distinct titles.
+    let mut group_sizes = [0u32; 6];
+    let mut counts: Vec<u32> = counts.into_values().collect();
+    while !counts.is_empty() {
+        group_sizes[counts.len()] += 1;
+        for c in counts.iter_mut() {
+            *c -= 1;
+        }
+        counts.retain(|&c| c > 0);
+    }
+
+    // A group of 5 plus a group of 3 costs more than two groups of 4,
+    // so rebalance every such pair to get the biggest discount.
+    let swaps = group_sizes[5].min(group_sizes[3]);
+    group_sizes[5] -= swaps;
+    group_sizes[3] -= swaps;
+    group_sizes[4] += 2 * swaps;
+
+    (1..=5).map(|n| group_sizes[n] * GROUP_PRICE[n]).sum()
 }
+
 
 
 ```

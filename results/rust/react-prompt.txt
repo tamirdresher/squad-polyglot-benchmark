@@ -148,7 +148,6 @@ impl<T: Copy + PartialEq> Reactor<T> {
 }
 
 
-
 ```
 
 Requirements:

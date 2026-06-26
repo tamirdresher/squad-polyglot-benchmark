@@ -24,17 +24,10 @@ See: [wikipedia](https://en.wikipedia.org/wiki/DNA_codon_table).
 
 ## Current code in lib.rs:
 ```
-// This exercise is deprecated.
-// Consider working on protein-translation instead.
-
-use std::marker::PhantomData;
+use std::collections::HashMap;
 
 pub struct CodonsInfo<'a> {
-    // This field is here to make the template compile and not to
-    // complain about unused type lifetime parameter "'a". Once you start
-    // solving the exercise, delete this field and the 'std::marker::PhantomData'
-    // import.
-    phantom: PhantomData<&'a ()>,
+    codons: HashMap<&'a str, &'a str>,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -42,23 +35,59 @@ pub struct Error;
 
 impl<'a> CodonsInfo<'a> {
     pub fn name_for(&self, codon: &str) -> Result<&'a str, Error> {
-        todo!(
-            "Return the protein name for a '{}' codon or Err, if codon string is invalid",
-            codon
-        );
+        // Every concrete codon a shorthand letter expands to encodes the same
+        // amino acid, so one representative nucleotide per position is enough
+        // to resolve the name.
+        let representative: String = codon
+            .chars()
+            .map(representative_nucleotide)
+            .collect::<Option<String>>()
+            .ok_or(Error)?;
+
+        if representative.len() != 3 {
+            return Err(Error);
+        }
+
+        self.codons
+            .get(representative.as_str())
+            .copied()
+            .ok_or(Error)
     }
 
     pub fn of_rna(&self, rna: &str) -> Result<Vec<&'a str>, Error> {
-        todo!("Return a list of protein names that correspond to the '{}' RNA string or Err if the RNA string is invalid", rna);
+        let nucleotides: Vec<char> = rna.chars().collect();
+        let mut proteins = Vec::new();
+        for chunk in nucleotides.chunks(3) {
+            let codon: String = chunk
+                .iter()
+                .map(|&c| if c == 'U' { 'T' } else { c })
+                .collect();
+            let name = self.name_for(&codon)?;
+            if name == "stop codon" {
+                break;
+            }
+            proteins.push(name);
+        }
+        Ok(proteins)
+    }
+}
+
+fn representative_nucleotide(letter: char) -> Option<char> {
+    match letter {
+        'A' | 'W' | 'M' | 'R' | 'D' | 'H' | 'V' | 'N' => Some('A'),
+        'C' | 'S' | 'Y' | 'B' => Some('C'),
+        'G' | 'K' => Some('G'),
+        'T' => Some('T'),
+        _ => None,
     }
 }
 
 pub fn parse<'a>(pairs: Vec<(&'a str, &'a str)>) -> CodonsInfo<'a> {
-    todo!(
-        "Construct a new CodonsInfo struct from given pairs: {:?}",
-        pairs
-    );
+    CodonsInfo {
+        codons: pairs.into_iter().collect(),
+    }
 }
+
 
 
 ```

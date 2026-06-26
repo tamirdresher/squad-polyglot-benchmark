@@ -69,7 +69,6 @@ pub fn answer(command: &str) -> Option<i32> {
 }
 
 
-
 ```
 
 Requirements:
